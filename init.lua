@@ -42,6 +42,7 @@ lazy.setup({
 	{'voldikss/vim-floaterm'},
 	{'mrjones2014/legendary.nvim'},
 	{'stevearc/dressing.nvim'},
+	{'nvim-treesitter/nvim-treesitter'},
 })
 
 -- Set <leader> to <space>
