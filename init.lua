@@ -32,7 +32,6 @@ lazy.setup({
   {'folke/tokyonight.nvim'},
   {'nvim-lualine/lualine.nvim'},
 	{'nvim-telescope/telescope.nvim'},
-	-- auto-complete requirements
 	{'neovim/nvim-lspconfig'},
 	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/cmp-buffer'},
@@ -41,18 +40,19 @@ lazy.setup({
 	{'hrsh7th/nvim-cmp'},
 	{'tanvirtin/vgit.nvim'},
 	{'voldikss/vim-floaterm'},
+	{'mrjones2014/legendary.nvim'},
+	{'stevearc/dressing.nvim'},
 })
 
 -- Set <leader> to <space>
 vim.g.mapleader = ' '
 
 require('user.editor-conf')   -- Editor Options
-require('user.auto-cmd')      -- Auto commands
-require('user.keybinds')      -- Keybinds
+require('user.legendary')     -- Keybinds, auto-cmds and arbitrary funcs
+require('user.dresser')       -- Makes legendary bareable to look at
 require('user.theme')         -- Theme
 require('user.lualine')       -- Lualine
 require('user.telescope')     -- Telescope
 require('user.auto-complete') -- nvim-cmp
 require('user.git')           -- git-tui
-require('user.floatterm')     -- floating terms
 
