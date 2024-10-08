@@ -1,0 +1,112 @@
+local lazy = {}
+
+function lazy.install(path)
+  if not vim.loop.fs_stat(path) then
+    print('Installing lazy.nvim....')
+    vim.fn.system({
+      'git',
+      'clone',
+      '--filter=blob:none',
+      'https://github.com/folke/lazy.nvim.git',
+      '--branch=stable', -- latest stable release
+      path,
+    })
+  end
+end
+
+function lazy.setup(plugins)
+  if vim.g.plugins_ready then
+    return
+  end
+
+  vim.opt.rtp:prepend(lazy.path)
+
+  require('lazy').setup(plugins, lazy.opts)
+  vim.g.plugins_ready = true
+end
+
+lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+lazy.opts = {}
+
+lazy.setup({
+  {'folke/tokyonight.nvim'},
+  {'nvim-lualine/lualine.nvim'},
+})
+
+-- Globals
+vim.g.mapleader = ' '
+
+-- Editor Options
+vim.opt.number = true        -- Add line numbers
+vim.opt.ignorecase = true    -- Ingnore case during search
+vim.opt.smartcase = true     -- ignore uppercase letters unless the search term has an uppercase letter
+vim.opt.hlsearch = false     -- turn off highlighting previous search
+vim.opt.wrap = false         -- turn off word wrapping
+vim.opt.tabstop = 2          -- Amount of chars <TAB> takes up
+vim.opt.shiftwidth = 2       -- how much to indent when using `<<` or `>>`
+vim.opt.expandtab = false    -- don't turn tabs into spaces
+
+-- Auto commands
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = augroup,
+  desc = 'Highlight on yank',
+  callback = function(event)
+    vim.highlight.on_yank({higroup = 'Visual', timeout = 200})
+  end
+})
+
+-- Keybinds
+vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Save'})
+vim.keymap.set({'n', 'x'}, 'gy', '"+y', {desc = 'Copy to clipboard'})
+vim.keymap.set({'n', 'x'}, 'gp', '"+p', {desc = 'Paste from clipboard'})
+
+-- Don't change registers when `X` or `x` is used
+vim.keymap.set({'n', 'x'}, 'x', '"_x')
+vim.keymap.set({'n', 'x'}, 'X', '"_d')
+
+-- TokyoNight
+vim.opt.termguicolors = true
+vim.cmd.colorscheme('tokyonight')
+
+-- Lualine
+require('lualine').setup {
+	options = {
+		icons_enabled = true,
+		theme = 'auto',
+		component_separators = { left = '', right = ''},
+		section_separators = { left = '', right = ''},
+		disabled_filetypes = {
+			statusline = {},
+			winbar = {},
+		},
+		ignore_focus = {},
+		always_divide_middle = true,
+		globalstatus = false,
+		refresh = {
+			statusline = 1000,
+			tabline = 1000,
+			winbar = 1000,
+		}
+	},
+	sections = {
+	lualine_a = {'mode'},
+	lualine_b = {'branch', 'diff', 'diagnostics'},
+	lualine_c = {'filename'},
+	lualine_x = {'encoding', 'fileformat', 'filetype'},
+	lualine_y = {'progress'},
+	lualine_z = {'location'}
+	},
+	inactive_sections = {
+	lualine_a = {},
+	lualine_b = {},
+	lualine_c = {'filename'},
+	lualine_x = {'location'},
+	lualine_y = {},
+	lualine_z = {}
+	},
+	tabline = {},
+	winbar = {},
+	inactive_winbar = {},
+	extensions = {}
+}
+
