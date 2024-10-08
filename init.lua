@@ -43,6 +43,7 @@ lazy.setup({
 	{'mrjones2014/legendary.nvim'},
 	{'stevearc/dressing.nvim'},
 	{'nvim-treesitter/nvim-treesitter'},
+	{'karb94/neoscroll.nvim'},
 })
 
 -- Set <leader> to <space>
@@ -57,4 +58,5 @@ require('user.telescope')     -- Telescope
 require('user.auto-complete') -- nvim-cmp
 require('user.git')           -- git-tui
 require('user.tree-sitter')   -- tree-sitter
+require('user.neoscroll')     -- smooth scrolling
 
