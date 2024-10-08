@@ -40,6 +40,7 @@ lazy.setup({
 	{'hrsh7th/cmp-cmdline'},
 	{'hrsh7th/nvim-cmp'},
 	{'tanvirtin/vgit.nvim'},
+	{'voldikss/vim-floaterm'},
 })
 
 -- Set <leader> to <space>
@@ -53,4 +54,5 @@ require('user.lualine')       -- Lualine
 require('user.telescope')     -- Telescope
 require('user.auto-complete') -- nvim-cmp
 require('user.git')           -- git-tui
+require('user.floatterm')     -- floating terms
 
