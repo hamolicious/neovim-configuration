@@ -12,7 +12,7 @@ require('legendary').setup({
 		{ 'X', '"_d', description = 'Acts like d without affecting registers' },
 	},
 	autocmds = {
-		{ 'FileType', 'nnoremap <buffer> q <cmd>quit<cr>', description = 'Use q to close the window' },
+		{ 'FileType', 'nnoremap <buffer> q <cmd>quit<cr>', opts = {pattern = {'help', 'man'}} , description = 'Use q to close the window' },
 		{ 'TextYankPost',
 			function(event)
 				vim.highlight.on_yank({higroup = 'Visual', timeout = 200})
