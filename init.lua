@@ -45,6 +45,7 @@ lazy.setup({
 	{'nvim-treesitter/nvim-treesitter'},
 	{'karb94/neoscroll.nvim'},
 	{'mcauley-penney/visual-whitespace.nvim'},
+	{'numToStr/Comment.nvim'},
 })
 
 -- Set <leader> to <space>
@@ -61,4 +62,5 @@ require('user.git')              -- git-tui
 require('user.tree-sitter')      -- tree-sitter
 require('user.neoscroll')        -- smooth scrolling
 require('user.visual-whitespace')-- visually display whitespaces
+require('user.comment')          -- visually display whitespaces
 
