@@ -44,19 +44,21 @@ lazy.setup({
 	{'stevearc/dressing.nvim'},
 	{'nvim-treesitter/nvim-treesitter'},
 	{'karb94/neoscroll.nvim'},
+	{'mcauley-penney/visual-whitespace.nvim'},
 })
 
 -- Set <leader> to <space>
 vim.g.mapleader = ' '
 
-require('user.editor-conf')   -- Editor Options
-require('user.legendary')     -- Keybinds, auto-cmds and arbitrary funcs
-require('user.dresser')       -- Makes legendary bareable to look at
-require('user.theme')         -- Theme
-require('user.lualine')       -- Lualine
-require('user.telescope')     -- Telescope
-require('user.auto-complete') -- nvim-cmp
-require('user.git')           -- git-tui
-require('user.tree-sitter')   -- tree-sitter
-require('user.neoscroll')     -- smooth scrolling
+require('user.editor-conf')      -- Editor Options
+require('user.legendary')        -- Keybinds, auto-cmds and arbitrary funcs
+require('user.dresser')          -- Makes legendary bareable to look at
+require('user.theme')            -- Theme
+require('user.lualine')          -- Lualine
+require('user.telescope')        -- Telescope
+require('user.auto-complete')    -- nvim-cmp
+require('user.git')              -- git-tui
+require('user.tree-sitter')      -- tree-sitter
+require('user.neoscroll')        -- smooth scrolling
+require('user.visual-whitespace')-- visually display whitespaces
 
