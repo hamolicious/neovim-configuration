@@ -1,3 +1,5 @@
+-- TODO: add python venvs
+
 return {
 	'nvim-lualine/lualine.nvim',
 	config = function()
@@ -22,23 +24,56 @@ return {
 			},
 			sections = {
 				lualine_a = { 'mode' },
-				lualine_b = { 'branch', 'diff', 'diagnostics' },
-				lualine_c = { 'filename' },
-				lualine_x = { 'encoding', 'fileformat', 'filetype' },
-				lualine_y = { 'progress' },
-				lualine_z = { 'location' }
+				lualine_b = { 'branch' },
+				lualine_c = { 'diff', 'diagnostics' },
+				lualine_x = { 'encoding',
+					{
+						'fileformat',
+						colored = true,
+						icon_only = true,
+					}
+				},
+				lualine_y = { 'filetype' },
+				lualine_z = { 'datetime' },
 			},
-			inactive_sections = {
+			inactive_sections = {},
+			tabline = {},
+			winbar = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = { 'filename' },
-				lualine_x = { 'location' },
+				lualine_c = { {
+					'filename',
+					file_status = true,
+					newfile_status = true,
+					path = 1,
+					shorting_target = 0,
+					symbols = {
+						modified = '- modified',
+						readonly = '- readonly',
+						unnamed = '- can\'t remember',
+						newfile = '- new file',
+					}
+				} },
+				lualine_x = {},
 				lualine_y = {},
 				lualine_z = {}
 			},
-			tabline = {},
-			winbar = {},
-			inactive_winbar = {},
+			inactive_winbar = {
+				lualine_a = {},
+				lualine_b = {},
+				lualine_c = {
+					{
+						'filename',
+						file_status = true,
+						newfile_status = true,
+						path = 1,
+						shorting_target = 0,
+					},
+				},
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {}
+			},
 			extensions = {}
 		})
 	end,

@@ -18,6 +18,7 @@ return {
 				{ '<leader>fg',        ':Telescope live_grep<cr>',                                     description = 'Telescope find with live grep' },
 				{ '<leader>fb',        ':Telescope buffers<cr>',                                       description = 'Telescope find buffers' },
 				{ '<leader>fh',        ':Telescope help_tags<cr>',                                     description = 'Telescope find help tags' },
+				{ '<leader>fd',        ':Telescope diagnostics<cr>',                                   description = 'Telescope find diagnostics' },
 				{ '<leader>fk',        '<cmd>Legendary<cr>',                                           description = 'Telescope find keymaps' },
 
 				-- Floating terminals
