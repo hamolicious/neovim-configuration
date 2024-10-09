@@ -59,7 +59,6 @@ lazy.setup({
 		'stevearc/oil.nvim',
 		dependencies = {
 			{ "echasnovski/mini.icons", opts = {} },
-			{ "folke/which-key.nvim" },
 		},
 	},
 	{ 'gh-liu/fold_line.nvim', event = 'VeryLazy' },
