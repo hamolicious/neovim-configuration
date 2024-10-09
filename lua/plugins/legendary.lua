@@ -21,9 +21,15 @@ return {
 				{ '<leader>fk',        '<cmd>Legendary<cr>',                                           description = 'Telescope find keymaps' },
 
 				-- Floating terminals
+				-- src: https://github.com/jesseduffield/lazygit
 				{ '<leader><leader>l', '<cmd>FloatermNew --title=LazyGit --autoclose=2 lazygit<cr>',   description = 'Open lazygit' },
+
+				-- src: https://github.com/Rigellute/spotify-tui
 				{ '<leader><leader>s', '<cmd>FloatermNew --title=Spotify --autoclose=2 spt<cr>',       description = 'Open Spotify' },
+
+				-- src: https://github.com/jesseduffield/lazydocker
 				{ '<leader><leader>d', '<cmd>FloatermNew --title=Docker --autoclose=2 lazydocker<cr>', description = 'Open lazydocker' },
+
 				{ '<leader><leader>t', '<cmd>FloatermNew --title=Terminal --autoclose=2<cr>',          description = 'Create new terminal' },
 				{ '<leader><leader>n', '<cmd>FloatermNew --title=MiniNeovim --autoclose=2 nvim .<cr>', description = 'Create temp neovim instance' },
 				{ '<leader>w',         '<cmd>write<cr>',                                               description = 'Save' },
