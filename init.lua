@@ -46,10 +46,12 @@ lazy.setup({
 	{'karb94/neoscroll.nvim'},
 	{'mcauley-penney/visual-whitespace.nvim'},
 	{'numToStr/Comment.nvim'},
-	{'stevearc/oil.nvim',
-  	---@module 'oil'
-  	---@type oil.SetupOpts,
-		dependencies = { { "echasnovski/mini.icons", opts = {} } },
+	{
+		'stevearc/oil.nvim',
+		dependencies = {
+			{ "echasnovski/mini.icons", opts = {} },
+			{ "folke/which-key.nvim" },
+		},
   },
 })
 

@@ -1,4 +1,13 @@
 require('legendary').setup({
+	extensions = {
+		lazy_nvim = { auto_register = true },
+		which_key = {
+			auto_register = true,
+			do_binding = false,
+			use_groups = true,
+		},
+	},
+	
 	keymaps = {
 		{ '<leader><leader>l', '<cmd>FloatermNew --title=LazyGit --autoclose=2 lazygit<cr>', description = 'Open lazygit'},
 		{ '<leader><leader>s', '<cmd>FloatermNew --title=Spotify --autoclose=2 spt<cr>', description = 'Open Spotify' },
@@ -11,6 +20,7 @@ require('legendary').setup({
 		{ 'x', '"_x', description = 'Delete a char without affecting registers' },
 		{ 'X', '"_d', description = 'Acts like d without affecting registers' },
 	},
+
 	autocmds = {
 		{ 'FileType', 'nnoremap <buffer> q <cmd>quit<cr>', opts = {pattern = {'help', 'man'}} , description = 'Use q to close the window' },
 		{ 'TextYankPost',
