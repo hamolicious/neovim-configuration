@@ -50,7 +50,7 @@ return {
 					symbols = {
 						modified = '- modified',
 						readonly = '- readonly',
-						unnamed = '- can\'t remember',
+						unnamed = 'can\'t remember',
 						newfile = '- new file',
 					}
 				} },
