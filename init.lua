@@ -62,6 +62,7 @@ lazy.setup({
 			{ "folke/which-key.nvim" },
 		},
 	},
+	{ 'gh-liu/fold_line.nvim', event = 'VeryLazy' },
 })
 
 -- Set <leader> to <space>
@@ -83,3 +84,4 @@ require('user.neoscroll')         -- smooth scrolling
 require('user.visual-whitespace') -- visually display whitespaces
 require('user.comment')           -- visually display whitespaces
 require('user.oil')               -- File namagement as buffer
+require('user.fold-line')         -- Folding lines
