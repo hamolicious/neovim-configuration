@@ -63,6 +63,7 @@ lazy.setup({
 		},
 	},
 	{ 'gh-liu/fold_line.nvim', event = 'VeryLazy' },
+	{ 'RRethy/vim-illuminate' },
 })
 
 -- Set <leader> to <space>
