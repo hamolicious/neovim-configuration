@@ -9,12 +9,26 @@ require('legendary').setup({
 	},
 	
 	keymaps = {
+		-- Telescope
+    { '<leader>ff', ':Telescope find_files<cr>', description = 'Telescope find files' },
+    { '<leader>fr', ':Telescope registers<cr>', description = 'Telescope find registers' },
+    { '<leader>fg', ':Telescope live_grep<cr>', description = 'Telescope find with live grep' },
+    { '<leader>fb', ':Telescope buffers<cr>', description = 'Telescope find buffers' },
+    { '<leader>fh', ':Telescope help_tags<cr>', description = 'Telescope find help tags' },
+		{ '<leader>fk', '<cmd>Legendary<cr>', description = 'Telescope find keymaps' },
+
+		-- Floating terminals
 		{ '<leader><leader>l', '<cmd>FloatermNew --title=LazyGit --autoclose=2 lazygit<cr>', description = 'Open lazygit'},
 		{ '<leader><leader>s', '<cmd>FloatermNew --title=Spotify --autoclose=2 spt<cr>', description = 'Open Spotify' },
 		{ '<leader><leader>d', '<cmd>FloatermNew --title=Docker --autoclose=2 lazydocker<cr>', description = 'Open lazydocker' },
 		{ '<leader><leader>t', '<cmd>FloatermNew --title=Terminal --autoclose=2<cr>', description = 'Create new terminal' },
-		{ '<leader><leader>k', '<cmd>Legendary<cr>', description = 'Show keymap legend panel' },
+		{
+			'<leader><leader>f', '<cmd>vsplit | Oil<cr>',
+			description = 'Display Oil'
+		},
 		{ '<leader>w', '<cmd>write<cr>', description = 'Save' },
+
+		-- Operations
 		{ 'gy', '"+y', description = 'Copy to clipboard' },
 		{ 'gp', '"+p', description = 'Paste from clipboard' },
 		{ 'x', '"_x', description = 'Delete a char without affecting registers' },
