@@ -48,6 +48,7 @@ lazy.setup({
 		require('plugins.comment'),         -- visually display whitespaces
 		require('plugins.oil'),             -- File namagement as buffer
 		require('plugins.fold-line'),       -- Show folds
+		require('plugins.modicator'),       -- Change your line number per mode
 	},
 	---@diagnostic disable-next-line
 	dev = {
