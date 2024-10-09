@@ -22,11 +22,11 @@ require('legendary').setup({
 		{ '<leader><leader>s', '<cmd>FloatermNew --title=Spotify --autoclose=2 spt<cr>', description = 'Open Spotify' },
 		{ '<leader><leader>d', '<cmd>FloatermNew --title=Docker --autoclose=2 lazydocker<cr>', description = 'Open lazydocker' },
 		{ '<leader><leader>t', '<cmd>FloatermNew --title=Terminal --autoclose=2<cr>', description = 'Create new terminal' },
-		{
-			'<leader><leader>f', '<cmd>vsplit | Oil<cr>',
-			description = 'Display Oil'
-		},
+		{ '<leader><leader>n', '<cmd>FloatermNew --title=MiniNeovim --autoclose=2 nvim .<cr>', description = 'Create temp neovim instance' },
 		{ '<leader>w', '<cmd>write<cr>', description = 'Save' },
+
+		-- Windows
+		{ '<leader><leader>f', '<cmd>vsplit | Oil<cr>', description = 'Display Oil' },
 
 		-- Operations
 		{ 'gy', '"+y', description = 'Copy to clipboard' },
