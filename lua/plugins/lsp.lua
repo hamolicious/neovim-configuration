@@ -11,6 +11,11 @@ return {
 				'pyright',
 				'lua_ls',
 				'ts_ls',
+				'eslint_d',
+				'prettierd',
+				'eslint_d',
+				'black',
+				'isort',
 			}
 		})
 
