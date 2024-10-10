@@ -30,24 +30,25 @@ end
 -- install plugins
 lazy.setup({
 	spec = {
-		require('plugins.legendary'),       -- Keybinds, auto-cmds and arbitrary funcs
-		require('plugins.floaterm'),        -- Floating terminals
-		require('plugins.lsp'),             -- Intelisense
-		require('plugins.formatting'),      -- Formatting
-		require('plugins.linting'),         -- Formatting
-		require('plugins.dresser'),         -- Makes legendary bareable to look at
-		require('plugins.theme'),           -- Theme
-		require('plugins.lualine'),         -- Lualine
-		require('plugins.telescope'),       -- Telescope
-		require('plugins.auto-complete'),   -- nvim-cmp
-		require('plugins.git'),             -- git-tui
-		require('plugins.tree-sitter'),     -- tree-sitter
-		require('plugins.highlight'),       -- highligh occurances
-		require('plugins.neoscroll'),       -- smooth scrolling
+		require('plugins.legendary'),        -- Keybinds, auto-cmds and arbitrary funcs
+		require('plugins.floaterm'),         -- Floating terminals
+		require('plugins.lsp'),              -- Intelisense
+		require('plugins.formatting'),       -- Formatting
+		require('plugins.linting'),          -- Formatting
+		require('plugins.dresser'),          -- Makes legendary bareable to look at
+		require('plugins.theme'),            -- Theme
+		require('plugins.lualine'),          -- Lualine
+		require('plugins.telescope'),        -- Telescope
+		require('plugins.auto-complete'),    -- nvim-cmp
+		require('plugins.git'),              -- git-tui
+		require('plugins.tree-sitter'),      -- tree-sitter
+		require('plugins.highlight'),        -- highligh occurances
+		require('plugins.neoscroll'),        -- smooth scrolling
 		require('plugins.visual-whitespace'), -- visually display whitespaces
-		require('plugins.comment'),         -- visually display whitespaces
-		require('plugins.oil'),             -- File namagement as buffer
-		require('plugins.fold-line'),       -- Show folds
+		require('plugins.comment'),          -- visually display whitespaces
+		require('plugins.oil'),              -- File namagement as buffer
+		require('plugins.fold-line'),        -- Show folds
+		require('plugins.auto-scale-windows'), -- Scale windows automatically
 	},
 	---@diagnostic disable-next-line
 	dev = {
