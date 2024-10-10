@@ -49,6 +49,7 @@ lazy.setup({
 		require('plugins.oil'),              -- File namagement as buffer
 		require('plugins.fold-line'),        -- Show folds
 		require('plugins.auto-scale-windows'), -- Scale windows automatically
+		require('plugins.minesweeper'),      -- minesweeper, why not
 	},
 	---@diagnostic disable-next-line
 	dev = {
