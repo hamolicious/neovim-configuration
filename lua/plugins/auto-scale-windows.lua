@@ -1,3 +1,5 @@
+-- Source: https://github.com/anuvyklack/windows.nvim/tree/main
+
 return {
 	'anuvyklack/windows.nvim',
 	dependencies = {
