@@ -9,8 +9,12 @@ return {
 
 				configs.setup({
 					ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "python", "javascript", "html" },
+					ignore_install = { "help", "man" },  -- Add the file types you want to ignore
 					sync_install = false,
-					highlight = { enable = true },
+					highlight = {
+						enable = true,
+						disable = { "help", "man" },  -- Disable Treesitter highlighting for help and man pages
+					},
 					indent = { enable = true },
 				})
 			end
