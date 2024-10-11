@@ -26,7 +26,23 @@ ls.add_snippets(nil, {
 				insert(3, "type"),
 				text(': ...'),
 			}
-			),
-	},
+		),
+		snip({
+				trig = "main",
+				namr = "main() and __main__",
+				dscr = "Adds a main func and __main__ check"
+			},
+			{
+				text({
+					'def main() -> None:',
+					'\t...',
+					'',
+					'if __name__ == \'__main__\':',
+					'\t...',
+				})
+			}
+		),
+	}
 })
+
 
