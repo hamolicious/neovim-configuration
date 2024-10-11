@@ -51,6 +51,7 @@ lazy.setup({
 		require('plugins.auto-scale-windows'), -- Scale windows automatically
 		require('plugins.minesweeper'),      -- minesweeper, why not
 		require('plugins.modicator'),        -- Dynamically & automatically scale windows
+		require('plugins.snippets'),         -- Dynamic snippets
 	},
 	---@diagnostic disable-next-line
 	dev = {
