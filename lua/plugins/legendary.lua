@@ -19,6 +19,8 @@ return {
 				{ '<leader>fb',        ':Telescope buffers<cr>',                                       description = 'Telescope find buffers' },
 				{ '<leader>fh',        ':Telescope help_tags<cr>',                                     description = 'Telescope find help tags' },
 				{ '<leader>fd',        ':Telescope diagnostics<cr>',                                   description = 'Telescope find diagnostics' },
+				{ '<leader>fe',        ':Telescope emoji<cr>',                                         description = 'Telescope find emojies' },
+				{ '<leader>fc',        ':Telescope glyph<cr>',                                         description = 'Telescope find glyphs' },
 				{ '<leader>fk',        '<cmd>Legendary<cr>',                                           description = 'Telescope find keymaps' },
 
 				-- Floating terminals
