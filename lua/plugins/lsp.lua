@@ -15,7 +15,7 @@ return {
 				'prettierd',
 				'eslint_d',
 				'black',
-				'isort',
+				-- 'isort', -- isort is not a valid entry?!
 			}
 		})
 
