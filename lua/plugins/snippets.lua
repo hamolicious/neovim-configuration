@@ -4,5 +4,8 @@ return {
 		{ 'saadparwaiz1/cmp_luasnip' }
 	},
 	after = 'nvim-cmp',
-	config = function() require('snippets.global') end,
+	config = function()
+		require('snippets.global')
+		require('snippets.python')
+	end,
 }
