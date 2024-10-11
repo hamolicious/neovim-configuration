@@ -57,11 +57,6 @@ lazy.setup({
 		path = "~/.local/src",
 	},
 	lockfile = vim.fn.stdpath("config") .. "/lua/plugins/lazy-lock.json",
-	ui = {
-		size = { width = 0.8, height = 0.8 }, -- hmmm?
-		wrap = true,
-		border = "shadow",
-	},
 	performance = {
 		cache = {
 			enabled = true,
