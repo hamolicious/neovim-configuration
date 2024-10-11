@@ -50,6 +50,7 @@ lazy.setup({
 		require('plugins.fold-line'),        -- Show folds
 		require('plugins.auto-scale-windows'), -- Scale windows automatically
 		require('plugins.minesweeper'),      -- minesweeper, why not
+		require('plugins.modicator'),        -- Dynamically & automatically scale windows
 	},
 	---@diagnostic disable-next-line
 	dev = {
