@@ -13,6 +13,15 @@ local date_yyyy_mm_dd = function() return { os.date('%Y-%m-%d') } end
 ls.add_snippets(nil, {
 	python = {
 		snip({
+				trig = "annot",
+				namr = "Annotations",
+				dscr = "Import annotations from future"
+			},
+			{
+				text('from __future__ import annotations'),
+			}
+		),
+		snip({
 				trig = "def",
 				namr = "Define function",
 				dscr = "Define a basic python function"
@@ -44,5 +53,3 @@ ls.add_snippets(nil, {
 		),
 	}
 })
-
-
