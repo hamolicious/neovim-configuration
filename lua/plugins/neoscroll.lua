@@ -10,7 +10,7 @@
 return {
 	'karb94/neoscroll.nvim',
 	config = function()
-		neoscroll = require('neoscroll')
+		local neoscroll = require('neoscroll')
 
 		neoscroll.setup({
 			hide_cursor = true,       -- Hide cursor while scrolling
