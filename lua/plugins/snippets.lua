@@ -6,8 +6,10 @@ return {
 	after = 'nvim-cmp',
 	config = function()
 		local ls = require('luasnip')
+
 		require('snippets.global')
 		require('snippets.python')
+		require('snippets.markdown')
 
 		-- vim.keymap.set({ "i" }, "<C-K>", function() ls.expand() end, { silent = true })
 		vim.keymap.set({ "i", "s" }, "<C-L>", function() ls.jump(1) end, { silent = true, desc = "Jump to next insertion" })
