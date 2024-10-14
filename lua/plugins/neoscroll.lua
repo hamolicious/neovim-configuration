@@ -24,11 +24,7 @@ return {
 			ignored_events = {        -- Events ignored while scrolling
 				'WinScrolled', 'CursorMoved'
 			},
-			mappings = {
-				'<C-u>', '<C-d>',
-				'<C-y>', '<C-e>',
-				'zt', 'zz', 'zb',
-			}
+			mappings = {}
 		})
 
 		local keymap = {
