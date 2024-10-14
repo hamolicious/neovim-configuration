@@ -62,5 +62,20 @@ ls.add_snippets(nil, {
 				})
 			}
 		),
+		snip({
+				trig = "try",
+				namr = "try catch",
+				dscr = "Add a try-catch block"
+			},
+			{
+				text({
+					'try:',
+					'\t...',
+					'',
+					'except Exception as e:',
+					'\t...',
+				})
+			}
+		),
 	}
 })
