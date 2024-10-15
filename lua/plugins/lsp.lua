@@ -11,11 +11,12 @@ return {
 				'pyright',
 				'lua_ls',
 				'ts_ls',
-				'eslint_d',
-				'prettierd',
-				'eslint_d',
-				'black',
-				-- 'isort', -- isort is not a valid entry?!
+				-- not a valid entry?!
+				-- 'eslint_d',
+				-- 'prettierd',
+				-- 'eslint_d',
+				-- 'black',
+				-- 'isort',
 			}
 		})
 
