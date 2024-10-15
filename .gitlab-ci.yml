@@ -1,0 +1,10 @@
+variables:
+  GITHUB_MIRROR_URL: "/hamolicious/neovim-configuration.git"
+
+include:
+  - project: "gitlab/default-pipelines"
+    file: "/gitlab-ci/mirror.gitlab-ci.yml"
+
+mirror_to_github:
+  needs: []
+  when: always
