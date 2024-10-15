@@ -1,3 +1,5 @@
+-- https://github.com/kevinhwang91/nvim-hlslens
+
 return {
 	'ruifm/gitlinker.nvim',
 	dependencies = { 'nvim-lua/plenary.nvim', },
