@@ -41,7 +41,7 @@ return {
 				{ '<leader><leader>f', '<cmd>vsplit | Oil<cr>',                                        description = 'Display Oil' },
 
 				-- Operations
-				{ 'gy',                '"+y',                                                          description = 'Copy to clipboard' },
+				{ 'gy',                '"+y',                                                          description = 'Copy to clipboard',                        mode = { 'n', 'v' } },
 				{ 'gp',                '"+p',                                                          description = 'Paste from clipboard' },
 				{ 'x',                 '"_x',                                                          description = 'Delete a char without affecting registers' },
 				{ 'X',                 '"_d',                                                          description = 'Acts like d without affecting registers' },
