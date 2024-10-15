@@ -6,5 +6,6 @@ include:
     file: "/gitlab-ci/mirror.gitlab-ci.yml"
 
 mirror_to_github:
+  stage: publish
   needs: []
   when: always
