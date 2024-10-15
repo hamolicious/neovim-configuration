@@ -52,6 +52,7 @@ lazy.setup({
 		require('plugins.minesweeper'),      -- minesweeper, why not
 		require('plugins.modicator'),        -- Dynamically & automatically scale windows
 		require('plugins.snippets'),         -- Dynamic snippets
+		require('plugins.gitlinker'),        -- Quickly copy permalinks to git
 	},
 	---@diagnostic disable-next-line
 	dev = {
