@@ -10,10 +10,20 @@ return {
 		{ "folke/which-key.nvim", },
 	},
 	config = function()
-		require("oil").setup({
+		local oil = require("oil")
+		oil.setup({
 			view_options = {
 				show_hidden = true,
 			}
 		})
+
+		vim.keymap.set(
+			{ 'v', 'n' },
+			'<leader><leader>f',
+			function()
+				oil.open_float()
+			end,
+			{ desc = '' }
+		)
 	end
 }

@@ -38,9 +38,6 @@ return {
 				{ '<leader><leader>n', '<cmd>FloatermNew --title=MiniNeovim --autoclose=2 nvim .<cr>',                                                           description = 'Create temp neovim instance' },
 				{ '<leader>w',         '<cmd>write<cr>',                                                                                                         description = 'Save' },
 
-				-- Windows
-				{ '<leader><leader>f', '<cmd>vsplit | Oil<cr>',                                                                                                  description = 'Display Oil' },
-
 				-- Operations
 				{ 'gy',                '"+y',                                                                                                                    description = 'Copy to clipboard',                                 mode = { 'n', 'v' } },
 				{ 'gp',                '"+p',                                                                                                                    description = 'Paste from clipboard' },
