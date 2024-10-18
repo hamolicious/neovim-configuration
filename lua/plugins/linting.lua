@@ -14,8 +14,8 @@ return {
 			end,
 		})
 
-		vim.keymap.set('n', '<leader>l', function()
+		vim.keymap.set('n', '<leader>bl', function()
 			require('lint').try_lint()
-		end)
+		end, { desc = 'Lint file' })
 	end
 }
