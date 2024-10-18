@@ -10,5 +10,17 @@ return {
 
 		telescope.load_extension('emoji')
 		telescope.load_extension('glyph')
+
+		vim.keymap.set(
+			{ 'v', 'n' },
+			'<leader>fb',
+			function()
+				builtin.buffers({
+					sort_mru = true,
+					select_current = true,
+				})
+			end,
+			{ desc = '' }
+		)
 	end
 }
