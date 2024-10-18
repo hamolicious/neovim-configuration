@@ -13,6 +13,17 @@ return {
 
 		vim.keymap.set(
 			{ 'v', 'n' },
+			'<leader>ft',
+			function()
+				builtin.treesitter({
+					show_line = true,
+				})
+			end,
+			{ desc = 'Telescope treesitter' }
+		)
+
+		vim.keymap.set(
+			{ 'v', 'n' },
 			'<leader>fb',
 			function()
 				builtin.buffers({
@@ -20,7 +31,7 @@ return {
 					select_current = true,
 				})
 			end,
-			{ desc = '' }
+			{ desc = 'Telescope buffers' }
 		)
 	end
 }
