@@ -13,6 +13,15 @@ return {
 
 		vim.keymap.set(
 			{ 'v', 'n' },
+			'<leader>fs',
+			function()
+				builtin.search_history()
+			end,
+			{ desc = 'Telescope search history' }
+		)
+
+		vim.keymap.set(
+			{ 'v', 'n' },
 			'<leader>ft',
 			function()
 				builtin.treesitter({
