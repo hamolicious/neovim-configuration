@@ -15,6 +15,7 @@ return {
 				-- Telescope
 				{ '<leader>ff',        ':Telescope find_files<cr>',                                                                                              description = 'Telescope find files' },
 				{ '<leader>fr',        ':Telescope registers<cr>',                                                                                               description = 'Telescope find registers' },
+				{ '<leader>fr',        ':Telescope treesitter<cr>',                                                                                              description = 'Telescope find registers' },
 				{ '<leader>fg',        ':Telescope live_grep<cr>',                                                                                               description = 'Telescope find with live grep' },
 				{ '<leader>fb',        ':Telescope buffers<cr>',                                                                                                 description = 'Telescope find buffers' },
 				{ '<leader>fh',        ':Telescope help_tags<cr>',                                                                                               description = 'Telescope find help tags' },
