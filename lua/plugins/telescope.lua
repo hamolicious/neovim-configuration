@@ -13,6 +13,15 @@ return {
 
 		vim.keymap.set(
 			{ 'v', 'n' },
+			'<leader>fw',
+			function()
+				builtin.spell_suggest()
+			end,
+			{ desc = 'Telescope spellings' }
+		)
+
+		vim.keymap.set(
+			{ 'v', 'n' },
 			'<leader>fs',
 			function()
 				builtin.search_history()
