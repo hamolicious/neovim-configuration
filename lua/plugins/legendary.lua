@@ -66,6 +66,10 @@ return {
 					end,
 					description = 'Format file'
 				},
+
+
+				-- Registers
+				{ 'Q', '@q', description = 'Play the q register' },
 			},
 
 			autocmds = {
