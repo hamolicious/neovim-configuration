@@ -1,5 +1,6 @@
 vim.g.mapleader = ' '         -- Set <leader> to SPACE
 
+vim.opt.termguicolors = true  -- 🌟 cOlOurS 🌟
 vim.opt.number = true         -- Add line numbers
 vim.opt.relativenumber = true -- Add relative line numbers
 vim.opt.ignorecase = true     -- Ingnore case during search
