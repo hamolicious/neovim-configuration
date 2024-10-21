@@ -53,6 +53,7 @@ lazy.setup({
 		require('plugins.modicator'),        -- Dynamically & automatically scale windows
 		require('plugins.snippets'),         -- Dynamic snippets
 		require('plugins.gitlinker'),        -- Quickly copy permalinks to git
+		require('plugins.coloriser'),        -- Preview hex codes
 	},
 	---@diagnostic disable-next-line
 	dev = {
