@@ -23,6 +23,7 @@ return {
 		require('lspconfig').lua_ls.setup({})
 		require('lspconfig').pyright.setup({})
 		require('lspconfig').ts_ls.setup({})
+		require('lspconfig').csharp_ls.setup({})
 	end
 
 }
