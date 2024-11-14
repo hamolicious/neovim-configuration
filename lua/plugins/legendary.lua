@@ -64,7 +64,8 @@ return {
 							timeout_ms = 500,
 						})
 					end,
-					description = 'Format file'
+					description = 'Format file',
+					mode = {'n', 'v'}
 				},
 
 
