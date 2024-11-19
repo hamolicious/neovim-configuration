@@ -42,6 +42,9 @@ return {
 				{ 'x',                 '"_x',                                                                                                                    description = 'Delete a char without affecting registers' },
 				{ 'X',                 '"_d',                                                                                                                    description = 'Acts like d without affecting registers' },
 
+				-- Tabs and Terms
+				{ '<leader>tt',        '<cmd>FloatermToggle<cr>',                                                                                                description = 'Toggle Terminal',                                   mode = { 'n', 'v' } },
+
 				-- Gitlink
 				{ '<leader>gy',        '<cmd>lua require"gitlinker".get_buf_range_url("n")<cr>',                                                                 description = 'Copy Gitlink <current line>',                       mode = { 'n' } },
 				{ '<leader>gb',        '<cmd>lua require"gitlinker".get_buf_range_url("n", {action_callback = require"gitlinker.actions".open_in_browser})<cr>', description = 'Copy Gitlink <current line, open in browser>',      mode = { 'n' } },
