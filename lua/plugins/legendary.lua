@@ -34,6 +34,10 @@ return {
 
 				{ '<leader><leader>t', '<cmd>FloatermNew --title=Terminal --autoclose=2<cr>',                                                                    description = 'Create new terminal' },
 				{ '<leader><leader>n', '<cmd>FloatermNew --title=MiniNeovim --autoclose=2 nvim .<cr>',                                                           description = 'Create temp neovim instance' },
+
+				-- src:
+				{ '<leader>tn',        '<cmd>UploadNote<cr>',                                                                                                    description = 'Take Trilum Note',                                  mode = { 'n', 'v' } },
+
 				{ '<leader>w',         '<cmd>write<cr>',                                                                                                         description = 'Save' },
 
 				-- Operations

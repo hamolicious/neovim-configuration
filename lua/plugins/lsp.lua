@@ -24,6 +24,9 @@ return {
 		require('lspconfig').pyright.setup({})
 		require('lspconfig').ts_ls.setup({})
 		require('lspconfig').csharp_ls.setup({})
+		require('lspconfig').docker_compose_language_service.setup({})
+		require('lspconfig').dockerls.setup({})
+		require('lspconfig').gitlab_ci_ls.setup({})
 	end
 
 }
