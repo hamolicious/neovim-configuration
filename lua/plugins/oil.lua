@@ -20,12 +20,7 @@ return {
 		})
 
 		vim.keymap.set(
-			{ 'v', 'n' },
-			'<leader><leader>f',
-			function()
-				oil.open_float()
-			end,
-			{ desc = '' }
+			{ 'v', 'n' }, '-', '<cmd>Oil<cr>', { desc = '' }
 		)
 	end
 }

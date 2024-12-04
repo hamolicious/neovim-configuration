@@ -34,6 +34,10 @@ return {
 
 				{ '<leader><leader>t', '<cmd>FloatermNew --title=Terminal --autoclose=2<cr>',                                                                    description = 'Create new terminal' },
 				{ '<leader><leader>n', '<cmd>FloatermNew --title=MiniNeovim --autoclose=2 nvim .<cr>',                                                           description = 'Create temp neovim instance' },
+
+				-- src:
+				{ '<leader>tn',        '<cmd>UploadNote<cr>',                                                                                                    description = 'Take Trilum Note',                                  mode = { 'n', 'v' } },
+
 				{ '<leader>w',         '<cmd>write<cr>',                                                                                                         description = 'Save' },
 
 				-- Operations
@@ -41,6 +45,9 @@ return {
 				{ 'gp',                '"+p',                                                                                                                    description = 'Paste from clipboard' },
 				{ 'x',                 '"_x',                                                                                                                    description = 'Delete a char without affecting registers' },
 				{ 'X',                 '"_d',                                                                                                                    description = 'Acts like d without affecting registers' },
+
+				-- Tabs and Terms
+				{ '<leader>tt',        '<cmd>FloatermToggle<cr>',                                                                                                description = 'Toggle Terminal',                                   mode = { 'n', 'v' } },
 
 				-- Gitlink
 				{ '<leader>gy',        '<cmd>lua require"gitlinker".get_buf_range_url("n")<cr>',                                                                 description = 'Copy Gitlink <current line>',                       mode = { 'n' } },
