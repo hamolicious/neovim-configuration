@@ -12,6 +12,10 @@ return {
 			},
 
 			keymaps = {
+				-- Debugging
+				{ '<leader>bt',        '<cmd> DapToggleBreakpoint <cr>',                                                                                         description = 'Toggle Breakpoint' },
+
+
 				-- Telescope
 				{ '<leader>ff',        ':Telescope find_files<cr>',                                                                                              description = 'Telescope find files' },
 				{ '<leader>fr',        ':Telescope registers<cr>',                                                                                               description = 'Telescope find registers' },

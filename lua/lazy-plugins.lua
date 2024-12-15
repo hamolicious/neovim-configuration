@@ -35,6 +35,8 @@ lazy.setup({
 		require('plugins.lsp'),              -- Intelisense
 		require('plugins.formatting'),       -- Formatting
 		require('plugins.linting'),          -- Formatting
+		require('plugins.debugging'),        -- Debugging
+		require('plugins.debugging-ui'),     -- Debugging TUI
 		require('plugins.dresser'),          -- Makes legendary bareable to look at
 		require('plugins.theme'),            -- Theme
 		require('plugins.lualine'),          -- Lualine
