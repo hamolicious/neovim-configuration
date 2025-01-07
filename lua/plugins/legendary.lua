@@ -35,6 +35,10 @@ return {
 				{ '<leader><leader>t', '<cmd>FloatermNew --title=Terminal --autoclose=2<cr>',                                                                    description = 'Create new terminal' },
 				{ '<leader><leader>n', '<cmd>FloatermNew --title=MiniNeovim --autoclose=2 nvim .<cr>',                                                           description = 'Create temp neovim instance' },
 
+				-- ChatGPT
+				{ '<leader>aa',        '<cmd>ChatGPT<cr>',                                                                                                       description = 'Open ChatGPT',                                      mode = { 'n', 'v' } },
+				{ '<leader>ai',        '<cmd>ChatGPTEditWithInstructions<cr>',                                                                                    description = 'ChatGPT with instructions',                         mode = { 'n', 'v' } },
+
 				-- src:
 				{ '<leader>tn',        '<cmd>UploadNote<cr>',                                                                                                    description = 'Take Trilum Note',                                  mode = { 'n', 'v' } },
 
@@ -72,7 +76,7 @@ return {
 						})
 					end,
 					description = 'Format file',
-					mode = {'n', 'v'}
+					mode = { 'n', 'v' }
 				},
 
 

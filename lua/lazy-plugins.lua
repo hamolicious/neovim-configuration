@@ -54,6 +54,7 @@ lazy.setup({
 		require('plugins.snippets'),         -- Dynamic snippets
 		require('plugins.gitlinker'),        -- Quickly copy permalinks to git
 		require('plugins.coloriser'),        -- Preview hex codes
+		require('plugins.chatgpt'),          -- chatgpt integration
 	},
 	---@diagnostic disable-next-line
 	dev = {
