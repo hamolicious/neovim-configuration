@@ -37,7 +37,7 @@ return {
 
 				-- ChatGPT
 				{ '<leader>aa',        '<cmd>ChatGPT<cr>',                                                                                                       description = 'Open ChatGPT',                                      mode = { 'n', 'v' } },
-				{ '<leader>ai',        '<cmd>ChatGPTEditWithInstructions<cr>',                                                                                    description = 'ChatGPT with instructions',                         mode = { 'n', 'v' } },
+				{ '<leader>ai',        '<cmd>ChatGPTEditWithInstructions<cr>',                                                                                   description = 'ChatGPT with instructions',                         mode = { 'n', 'v' } },
 
 				-- src:
 				{ '<leader>tn',        '<cmd>UploadNote<cr>',                                                                                                    description = 'Take Trilum Note',                                  mode = { 'n', 'v' } },
@@ -51,6 +51,9 @@ return {
 				{ 'X',                 '"_d',                                                                                                                    description = 'Acts like d without affecting registers' },
 
 				-- Tabs and Terms
+				{ '<leader>tt',        '<cmd>FloatermToggle<cr>',                                                                                                description = 'Toggle Terminal',                                   mode = { 'n', 'v' } },
+				{ '<leader>tN',        '<cmd>tabnew<cr>',                                                                                                        description = 'New Tab',                                           mode = { 'n', 'v' } },
+				{ '<leader>tw',        '<cmd>tabclose<cr>',                                                                                                      description = 'Close Tab',                                         mode = { 'n', 'v' } },
 				{ '<leader>tt',        '<cmd>FloatermToggle<cr>',                                                                                                description = 'Toggle Terminal',                                   mode = { 'n', 'v' } },
 
 				-- Gitlink
