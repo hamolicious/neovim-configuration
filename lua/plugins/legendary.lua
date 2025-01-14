@@ -56,6 +56,9 @@ return {
 				{ '<leader>tr',        '<cmd>set relativenumber<cr>',                                                                                            description = 'Use relative line numbers',                         mode = { 'n', 'v' } },
 				{ '<leader>tl',        '<cmd>set norelativenumber<cr>',                                                                                          description = 'Use non-relative line numbers',                     mode = { 'n', 'v' } },
 
+				-- Games
+				{ '<leader>pm',        '<cmd>Nvimesweeper<cr>',                                                                                                   description = 'Play Minesweeper',                                  mode = { 'n', 'v' } },
+
 				-- Gitlink
 				{ '<leader>gy',        '<cmd>lua require"gitlinker".get_buf_range_url("n")<cr>',                                                                 description = 'Copy Gitlink <current line>',                       mode = { 'n' } },
 				{ '<leader>gb',        '<cmd>lua require"gitlinker".get_buf_range_url("n", {action_callback = require"gitlinker.actions".open_in_browser})<cr>', description = 'Copy Gitlink <current line, open in browser>',      mode = { 'n' } },
