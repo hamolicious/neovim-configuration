@@ -51,10 +51,10 @@ return {
 				{ 'X',                 '"_d',                                                                                                                    description = 'Acts like d without affecting registers' },
 
 				-- Tabs and Terms
-				{ '<leader>tt',        '<cmd>FloatermToggle<cr>',                                                                                                description = 'Toggle Terminal',                                   mode = { 'n', 'v' } },
 				{ '<leader>tN',        '<cmd>tabnew<cr>',                                                                                                        description = 'New Tab',                                           mode = { 'n', 'v' } },
 				{ '<leader>tw',        '<cmd>tabclose<cr>',                                                                                                      description = 'Close Tab',                                         mode = { 'n', 'v' } },
-				{ '<leader>tt',        '<cmd>FloatermToggle<cr>',                                                                                                description = 'Toggle Terminal',                                   mode = { 'n', 'v' } },
+				{ '<leader>tr',        '<cmd>set relativenumber<cr>',                                                                                            description = 'Use relative line numbers',                         mode = { 'n', 'v' } },
+				{ '<leader>tl',        '<cmd>set norelativenumber<cr>',                                                                                          description = 'Use non-relative line numbers',                     mode = { 'n', 'v' } },
 
 				-- Gitlink
 				{ '<leader>gy',        '<cmd>lua require"gitlinker".get_buf_range_url("n")<cr>',                                                                 description = 'Copy Gitlink <current line>',                       mode = { 'n' } },
