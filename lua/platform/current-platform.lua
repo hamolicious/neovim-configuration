@@ -10,11 +10,11 @@ function CurrentPlatform()
 end
 
 function IsCurrentPlatformOneOf(...)
-    local currentPlatform = CurrentPlatform()
-    for _, platform in ipairs({...}) do
-        if platform == currentPlatform then
-            return true
-        end
+  local currentPlatform = CurrentPlatform()
+  for _, platform in ipairs({ ... }) do
+    if platform == currentPlatform then
+      return true
     end
-    return false
+  end
+  return false
 end

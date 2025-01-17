@@ -1,4 +1,4 @@
-local currentPlatform = require('platform.current-platform')
+require('platform.current-platform')
 
 -- Install more with :Mason
 return {
@@ -17,7 +17,7 @@ return {
       },
     }
 
-    if (currentPlatform ~= Platform.WORK_MAC) then
+    if (not IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       setupTable['format_on_save']
       = {
         lsp_fallback = true,

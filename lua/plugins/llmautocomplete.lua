@@ -4,8 +4,8 @@ return {
     local customProviderOptions = require('platform.llm-provider')
 
     local setupTable = {
-      throttle = 1000,   -- ms
-      debounce = 400,    -- ms
+      throttle = 1000, -- ms
+      debounce = 400,  -- ms
       cmp = {
         enable_auto_complete = true,
       },
