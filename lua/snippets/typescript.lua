@@ -13,39 +13,16 @@ local date_yyyy_mm_dd = function() return { os.date('%Y-%m-%d') } end
 ls.add_snippets(nil, {
 	all = {
 		snip({
-			trig = "date",
-			namr = "Date YYYY-MM-DD",
-			dscr = "Date in the form of YYYY-MM-DD",
+			trig = "eaf",
+			namr = "export async function",
+			dscr = "",
 		}, {
-			func(date_yyyy_mm_dd, {}),
-		}),
-		snip({
-			trig = "ham",
-			namr = "ham  hamolicious",
-			dscr = "Expand hamolicious",
-		}, {
-			text('hamolicious')
-		}),
-		snip({
-			trig = "vp",
-			namr = "vp  viktors patmalnieks",
-			dscr = "Expand viktors patmalnieks",
-		}, {
-			text('viktors patmalnieks')
-		}),
-		snip({
-			trig = "[]",
-			namr = "[]  - [ ]",
-			dscr = "Expand md brackets",
-		}, {
-			text('- [ ]')
-		}),
-		snip({
-			trig = "[x]",
-			namr = "[x]  - [x]",
-			dscr = "Expand md brackets",
-		}, {
-			text('- [x]')
+			text("export async function"),
+			insert(1, "function_name"),
+			text("("),
+			insert(2, "function_args"),
+			text(")"),
+			text("{};"),
 		}),
 		-- left as an example
 		snip({
