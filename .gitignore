@@ -1,5 +1,5 @@
 # Custom, platform dependant configs
-platform/
+platform/current-platform.lua
 
 # Compiled Lua sources
 luac.out
