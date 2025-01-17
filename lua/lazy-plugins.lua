@@ -27,40 +27,61 @@ if not status_ok then
   return
 end
 
+
+local function getPlugins()
+  return coroutine.create(function()
+    coroutine.yield(require('plugins.legendary'))           -- Keybinds, auto-cmds and arbitrary funcs
+    coroutine.yield(require('plugins.floaterm'))            -- Floating terminals
+    coroutine.yield(require('plugins.lsp'))                 -- Intelisense
+    coroutine.yield(require('plugins.formatting'))          -- Formatting
+    coroutine.yield(require('plugins.linting'))             -- Formatting
+    coroutine.yield(require('plugins.dresser'))             -- Makes legendary bareable to look at
+    coroutine.yield(require('plugins.theme'))               -- Theme
+    coroutine.yield(require('plugins.lualine'))             -- Lualine
+    coroutine.yield(require('plugins.telescope'))           -- Telescope
+    coroutine.yield(require('plugins.auto-complete'))       -- nvim-cmp
+    coroutine.yield(require('plugins.git'))                 -- git-tui
+    coroutine.yield(require('plugins.tree-sitter'))         -- tree-sitter
+    coroutine.yield(require('plugins.highlight'))           -- highligh occurances
+    coroutine.yield(require('plugins.neoscroll'))           -- smooth scrolling
+    coroutine.yield(require('plugins.visual-whitespace'))   -- visually display whitespaces
+    coroutine.yield(require('plugins.comment'))             -- visually display whitespaces
+    coroutine.yield(require('plugins.oil'))                 -- File namagement as buffer
+    coroutine.yield(require('plugins.fold-line'))           -- Show folds
+    coroutine.yield(require('plugins.auto-scale-windows'))  -- Scale windows automatically
+    coroutine.yield(require('plugins.minesweeper'))         -- minesweeper, why not
+    coroutine.yield(require('plugins.modicator'))           -- Dynamically & automatically scale windows
+    coroutine.yield(require('plugins.snippets'))            -- Dynamic snippets
+    coroutine.yield(require('plugins.gitlinker'))           -- Quickly copy permalinks to git
+    coroutine.yield(require('plugins.coloriser'))           -- Preview hex codes
+    coroutine.yield(require('plugins.autoclose'))           -- automatically close brackets
+    coroutine.yield(require('plugins.markdown-preview'))    -- Live markdown preview
+    coroutine.yield(require('plugins.increment-decrement')) -- Toggle bools, weekdays, on off and yes, no
+
+    if (IsCurrentPlatformOneOf(Platform.WORK_MAC, Platform.UBUNTU_PC)) then
+      coroutine.yield(require('plugins.chatgpt'))         -- chatgpt integration
+      coroutine.yield(require('plugins.llmautocomplete')) -- use LLMs to auto complete code
+    end
+  end)
+end
+
+local function unpackPlugins()
+  local plugins = {}
+  local coroutineFunc = getPlugins()
+
+  repeat
+    local status, result = coroutine.resume(coroutineFunc)
+    if status and result then
+      table.insert(plugins, result)
+    end
+  until not status
+
+  return plugins
+end
+
 -- install plugins
 lazy.setup({
-  spec = {
-    require('plugins.legendary'),           -- Keybinds, auto-cmds and arbitrary funcs
-    require('plugins.floaterm'),            -- Floating terminals
-    require('plugins.lsp'),                 -- Intelisense
-    require('plugins.formatting'),          -- Formatting
-    require('plugins.linting'),             -- Formatting
-    require('plugins.dresser'),             -- Makes legendary bareable to look at
-    require('plugins.theme'),               -- Theme
-    require('plugins.lualine'),             -- Lualine
-    require('plugins.telescope'),           -- Telescope
-    require('plugins.auto-complete'),       -- nvim-cmp
-    require('plugins.git'),                 -- git-tui
-    require('plugins.tree-sitter'),         -- tree-sitter
-    require('plugins.highlight'),           -- highligh occurances
-    require('plugins.neoscroll'),           -- smooth scrolling
-    require('plugins.visual-whitespace'),   -- visually display whitespaces
-    require('plugins.comment'),             -- visually display whitespaces
-    require('plugins.oil'),                 -- File namagement as buffer
-    require('plugins.fold-line'),           -- Show folds
-    require('plugins.auto-scale-windows'),  -- Scale windows automatically
-    require('plugins.minesweeper'),         -- minesweeper, why not
-    require('plugins.modicator'),           -- Dynamically & automatically scale windows
-    require('plugins.snippets'),            -- Dynamic snippets
-    require('plugins.gitlinker'),           -- Quickly copy permalinks to git
-    require('plugins.coloriser'),           -- Preview hex codes
-    require('plugins.chatgpt'),             -- chatgpt integration
-    require('plugins.llmautocomplete'),     -- use LLMs to auto complete code
-    require('plugins.autoclose'),           -- automatically close brackets
-    require('plugins.markdown-preview'),    -- Live markdown preview
-    require('plugins.increment-decrement'), -- Toggle bools, weekdays, on off and yes, no
-  },
-
+  spec = unpackPlugins(),
   ---@diagnostic disable-next-line
   dev = {
     path = "~/.local/src",

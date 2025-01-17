@@ -1,6 +1,3 @@
-# Custom, platform dependant configs
-platform/current-platform.lua
-
 # Compiled Lua sources
 luac.out
 

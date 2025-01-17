@@ -1,6 +1,4 @@
-local currentPlatform = require('platform.current-platform')
-
-if (currentPlatform == Platform.WORK_MAC) then
+if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
   return {
     provider = 'openai',
     provider_options = {
@@ -17,7 +15,7 @@ if (currentPlatform == Platform.WORK_MAC) then
       },
     },
   }
-elseif (currentPlatform == Platform.UBUNTU_PC) then
+elseif (IsCurrentPlatformOneOf(Platform.UBUNTU_PC)) then
   return {
     openai_compatible = {
       model = 'mistral',

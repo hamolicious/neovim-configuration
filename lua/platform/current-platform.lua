@@ -1,9 +1,20 @@
--- create me a platform enum
 Platform = {
-  UNKNUNKNOWN = 0,
-  WORK_MAC = 1,
-  UBUNTU_PC = 2,
-  UBUNTU_LAPTOP = 3,
+  UNKNOWN = "UNKNOWN",
+  WORK_MAC = "WORK_MAC",
+  UBUNTU_PC = "UBUNTU_PC",
+  UBUNTU_LAPTOP = "UBUNTU_LAPTOP",
 }
 
-return Platform.UNKNUNKNOWN;
+function CurrentPlatform()
+  return os.getenv("NVIM_PLATFORM") or Platform.UNKNOWN
+end
+
+function IsCurrentPlatformOneOf(...)
+    local currentPlatform = CurrentPlatform()
+    for _, platform in ipairs({...}) do
+        if platform == currentPlatform then
+            return true
+        end
+    end
+    return false
+end
