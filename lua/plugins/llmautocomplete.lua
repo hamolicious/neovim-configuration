@@ -2,23 +2,11 @@ return {
   {
     'milanglacier/minuet-ai.nvim',
     config = function()
-      require('minuet').setup {
-        provider = 'openai',
+      local customProviderOptions = require('platform.llm-provider')
 
-        provider_options = {
-          openai = {
-            model = 'gpt-4o-mini',
-            -- system = "see [System Prompt] section for the default value",
-            -- few_shots = "see [System Prompt] section for the default value",
-            stream = true,
-            optional = {
-              stop = { 'end' },
-              max_tokens = 256,
-              -- top_p = 0.9,
-            },
-          },
-        },
-
+      local setupTable = {
+        throttle = 1000, -- ms
+        debounce = 400,  -- ms
         cmp = {
           enable_auto_complete = true,
         },
@@ -26,7 +14,7 @@ return {
           enable_auto_complete = false,
         },
         virtualtext = {
-          auto_trigger_ft = {},
+          auto_trigger_ft = { '*' },
           keymap = {
             accept = '<Tab>',
             dismiss = '<S-Tab>',
@@ -38,6 +26,13 @@ return {
           },
         },
       }
+
+      for k, v in pairs(customProviderOptions) do
+        ---@diagnostic disable-next-line: assign-type-mismatch
+        setupTable[k] = v
+      end
+
+      require('minuet').setup(setupTable)
     end
   },
 }
