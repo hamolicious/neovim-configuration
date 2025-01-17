@@ -58,9 +58,12 @@ local function getPlugins()
     coroutine.yield(require('plugins.markdown-preview'))    -- Live markdown preview
     coroutine.yield(require('plugins.increment-decrement')) -- Toggle bools, weekdays, on off and yes, no
 
-    if (IsCurrentPlatformOneOf(Platform.WORK_MAC, Platform.UBUNTU_PC)) then
+    if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       coroutine.yield(require('plugins.chatgpt'))         -- chatgpt integration
       coroutine.yield(require('plugins.llmautocomplete')) -- use LLMs to auto complete code
+    end
+
+    if (IsCurrentPlatformOneOf(Platform.WORK_MAC, Platform.UBUNTU_PC)) then
     end
   end)
 end
