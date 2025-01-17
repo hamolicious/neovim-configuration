@@ -1,5 +1,5 @@
 -- create me a platform enum
-local Platform = {
+Platform = {
   UNKNUNKNOWN = 0,
   WORK_MAC = 1,
   UBUNTU_PC = 2,

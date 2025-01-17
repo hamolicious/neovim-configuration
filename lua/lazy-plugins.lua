@@ -59,8 +59,8 @@ lazy.setup({
     require('plugins.autoclose'),           -- automatically close brackets
     require('plugins.markdown-preview'),    -- Live markdown preview
     require('plugins.increment-decrement'), -- Toggle bools, weekdays, on off and yes, no
-
   },
+
   ---@diagnostic disable-next-line
   dev = {
     path = "~/.local/src",

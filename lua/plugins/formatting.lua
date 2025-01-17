@@ -1,3 +1,5 @@
+local currentPlatform = require('platform.current-platform')
+
 -- Install more with :Mason
 return {
   'stevearc/conform.nvim',
@@ -15,8 +17,7 @@ return {
       },
     }
 
-    local fos = require('platform.autoformat-onsave');
-    if (fos) then
+    if (currentPlatform ~= Platform.WORK_MAC) then
       setupTable['format_on_save']
       = {
         lsp_fallback = true,
