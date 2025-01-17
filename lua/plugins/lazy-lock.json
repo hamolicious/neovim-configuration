@@ -22,6 +22,7 @@
   "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
   "middleclass": { "branch": "master", "commit": "9fab4d5bca67262614960960ca35c4740eb2be2c" },
   "mini.icons": { "branch": "main", "commit": "1c79feb7478ca773fa3dac5cadf43ced9180e861" },
+  "minuet-ai.nvim": { "branch": "main", "commit": "18f4eea1c10b2d8a36df73a2744225b4efdaa968" },
   "modicator.nvim": { "branch": "main", "commit": "45b64561e109cd04de551b081fb947b4f856009e" },
   "neoscroll.nvim": { "branch": "master", "commit": "f957373912e88579e26fdaea4735450ff2ef5c9c" },
   "nui.nvim": { "branch": "main", "commit": "53e907ffe5eedebdca1cd503b00aa8692068ca46" },

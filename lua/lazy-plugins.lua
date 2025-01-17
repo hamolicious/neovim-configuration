@@ -55,6 +55,7 @@ lazy.setup({
     require('plugins.gitlinker'),           -- Quickly copy permalinks to git
     require('plugins.coloriser'),           -- Preview hex codes
     require('plugins.chatgpt'),             -- chatgpt integration
+    require('plugins.llmautocomplete'),     -- use LLMs to auto complete code
     require('plugins.autoclose'),           -- automatically close brackets
     require('plugins.markdown-preview'),    -- Live markdown preview
     require('plugins.increment-decrement'), -- Toggle bools, weekdays, on off and yes, no
