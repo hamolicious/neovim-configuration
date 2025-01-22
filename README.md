@@ -1,16 +1,17 @@
 # neovim configuration
 
-Neovim configuration that's built to replace VSCode.
+My neovim configs: contains the essential, the useful, and the weird.
 
 ## Environment Variables
+
 This configuration uses a number of environment variables to customize the behavior of Neovim and it's plugins.
 
 ```bash
-# sets the prefered editor
+# sets the prefered editor, can't remember for what though
 export EDITOR="nvim"
 
 # used to controll platform specific configuration
-export NVIM_PLATFORM='WORK_MAC'
+export NVIM_PLATFORM='UBUNTU_PC'
 ```
 
 ## Dependencies
@@ -27,6 +28,6 @@ brew install lazygit
 # `<leader><leader>d` for docker operations
 brew install lazydocker
 
-# `<leader><leader>s` for spotify operations
+# `<leader><leader>s` for spotify operations # TODO: remove dis
 brew install spotify-tui
 ```
