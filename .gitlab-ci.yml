@@ -8,4 +8,4 @@ include:
 mirror_to_github:
   stage: deploy
   needs: []
-  when: always
+  when: manual
