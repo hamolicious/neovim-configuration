@@ -13,6 +13,15 @@ local date_yyyy_mm_dd = function() return { os.date('%Y-%m-%d') } end
 ls.add_snippets(nil, {
 	all = {
 		snip({
+			trig = "log",
+			namr = "console.log",
+			dscr = "",
+		}, {
+			text("console.log(JSON.stringify("),
+			insert(1, "data"),
+			text("))"),
+		}),
+		snip({
 			trig = "eaf",
 			namr = "export async function",
 			dscr = "",

@@ -62,9 +62,6 @@ local function getPlugins()
       coroutine.yield(require('plugins.chatgpt'))         -- chatgpt integration
       coroutine.yield(require('plugins.llmautocomplete')) -- use LLMs to auto complete code
     end
-
-    if (IsCurrentPlatformOneOf(Platform.WORK_MAC, Platform.UBUNTU_PC)) then
-    end
   end)
 end
 
