@@ -18,6 +18,10 @@ return {
           'pet',
           'life',
         },
+        {
+          'left',
+          'right',
+        }
       },
     })
   end
