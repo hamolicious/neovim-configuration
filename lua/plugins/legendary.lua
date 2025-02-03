@@ -52,11 +52,13 @@ return {
         { 'x',                 '"_x',                                                                                                                    description = 'Delete a char without affecting registers' },
         { 'X',                 '"_d',                                                                                                                    description = 'Acts like d without affecting registers' },
 
-        -- Tabs and Terms
-        { '<leader>tN',        '<cmd>tabnew<cr>',                                                                                                        description = 'New Tab',                                           mode = { 'n', 'v' } },
-        { '<leader>tw',        '<cmd>tabclose<cr>',                                                                                                      description = 'Close Tab',                                         mode = { 'n', 'v' } },
+        -- Editor settings
         { '<leader>tr',        '<cmd>set relativenumber<cr>',                                                                                            description = 'Use relative line numbers',                         mode = { 'n', 'v' } },
         { '<leader>tl',        '<cmd>set norelativenumber<cr>',                                                                                          description = 'Use non-relative line numbers',                     mode = { 'n', 'v' } },
+
+        -- Tabs and Terms
+        { 'tn',                '<cmd>tabnew<cr>',                                                                                                        description = 'New Tab',                                           mode = { 'n', 'v' } },
+        { 'tw',                '<cmd>tabclose<cr>',                                                                                                      description = 'Close Tab',                                         mode = { 'n', 'v' } },
 
         -- Games
         { '<leader>pm',        '<cmd>Nvimesweeper<cr>',                                                                                                  description = 'Play Minesweeper',                                  mode = { 'n', 'v' } },
