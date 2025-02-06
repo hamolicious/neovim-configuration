@@ -21,6 +21,16 @@ return {
         {
           'left',
           'right',
+        },
+        {
+          'OPTIONS',
+          'GET',
+          'HEAD',
+          'POST',
+          'PUT',
+          'DELETE',
+          'TRACE',
+          'CONNECT',
         }
       },
     })

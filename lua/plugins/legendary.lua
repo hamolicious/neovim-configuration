@@ -44,9 +44,21 @@ return {
         -- src:
         { '<leader>tn',        '<cmd>UploadNote<cr>',                                                                                                    description = 'Take Trilum Note',                                  mode = { 'n', 'v' } },
 
-        { '<leader>w',         '<cmd>write<cr>',                                                                                                         description = 'Save' },
+        -- HTTP Client
+        { '<cr>',              "<cmd>lua require('kulala').run()<cr>",                                                                                   description = 'Run HTTP Request',                                  move = { 'n' } },
+        { 'ri',                "<cmd>lua require('kulala').inspect()<cr>",                                                                               description = 'Inspect HTTP Request',                              move = { 'n' } },
+        { 'rp',                "<cmd>lua require('kulala').jump_prev()<cr>",                                                                             description = 'Jump to previous request',                          move = { 'n' } },
+        { 'rn',                "<cmd>lua require('kulala').jump_next()<cr>",                                                                             description = 'Jumpt to next request',                             move = { 'n' } },
+        { 'rs',                "<cmd>lua require('kulala').show_stats()<cr>",                                                                            description = 'Last request stats',                                move = { 'n' } },
+        -- QUESTION: should `rf` be moved to telescope conf?
+        { 'rf',                "<cmd>lua require('kulala').search()<cr>",                                                                                description = 'Find requests',                                     move = { 'n' } },
+        { 'rt',                "<cmd>lua require('kulala').toggle_view()<cr>",                                                                           description = 'Toggle headers/body',                               move = { 'n' } },
+        { 're',                 "<cmd>lua require('kulala').scratchpad()<cr>",                                                                            description = 'Open request scratchpad',                           move = { 'n' } },
+        { '<leader>co',        "<cmd>lua require('kulala').copy()<cr>",                                                                                  description = 'Copy HTTP Request as Curl',                         move = { 'n' } },
+        { '<leader>ci',        "<cmd>lua require('kulala').from_curl()<cr>",                                                                             description = 'Paste Curl Request as HTTP Request',                move = { 'n' } },
 
         -- Operations
+        { '<leader>w',         '<cmd>write<cr>',                                                                                                         description = 'Save' },
         { 'gy',                '"+y',                                                                                                                    description = 'Copy to clipboard',                                 mode = { 'n', 'v' } },
         { 'gp',                '"+p',                                                                                                                    description = 'Paste from clipboard' },
         { 'x',                 '"_x',                                                                                                                    description = 'Delete a char without affecting registers' },

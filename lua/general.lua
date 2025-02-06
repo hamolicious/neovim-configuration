@@ -1,3 +1,7 @@
+-- set syntax highlight for http files
+vim.cmd('autocmd BufNewFile,BufRead *.http set filetype=http')
+vim.cmd('autocmd FileType http TSEnable highlight')
+
 vim.g.mapleader = ' '         -- Set <leader> to SPACE
 
 vim.opt.termguicolors = true  -- 🌟 cOlOurS 🌟

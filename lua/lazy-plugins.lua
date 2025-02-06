@@ -45,10 +45,11 @@ local function getPlugins()
     coroutine.yield(require('plugins.highlight'))           -- highligh occurances
     coroutine.yield(require('plugins.neoscroll'))           -- smooth scrolling
     coroutine.yield(require('plugins.visual-whitespace'))   -- visually display whitespaces
-    coroutine.yield(require('plugins.comment'))             -- visually display whitespaces
+    coroutine.yield(require('plugins.comment'))             -- comment commands
     coroutine.yield(require('plugins.oil'))                 -- File namagement as buffer
     coroutine.yield(require('plugins.fold-line'))           -- Show folds
     coroutine.yield(require('plugins.auto-scale-windows'))  -- Scale windows automatically
+    coroutine.yield(require('plugins.http-client'))         -- HTTP Client
     coroutine.yield(require('plugins.minesweeper'))         -- minesweeper, why not
     coroutine.yield(require('plugins.modicator'))           -- Dynamically & automatically scale windows
     coroutine.yield(require('plugins.snippets'))            -- Dynamic snippets
