@@ -1,7 +1,4 @@
-if not IsCurrentPlatformOneOf(Platform.CONTAINER) then
-  require('custom')
-end
-
+require('custom')
 require('general')
 require('commands')
 require('lazy-plugins')
