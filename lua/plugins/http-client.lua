@@ -43,7 +43,7 @@ return {
       vim.api.nvim_buf_set_keymap(
         0,
         "n",
-        "<leader>i",
+        "ri",
         "<cmd>lua require('kulala').inspect()<cr>",
         { noremap = true, silent = true, desc = "Inspect the current request" }
       )
@@ -51,7 +51,7 @@ return {
       vim.api.nvim_buf_set_keymap(
         0,
         "n",
-        "<leader>t",
+        "rt",
         "<cmd>lua require('kulala').toggle_view()<cr>",
         { noremap = true, silent = true, desc = "Toggle between body and headers" }
       )
@@ -59,7 +59,7 @@ return {
       vim.api.nvim_buf_set_keymap(
         0,
         "n",
-        "<leader>co",
+        "<leader>ry",
         "<cmd>lua require('kulala').copy()<cr>",
         { noremap = true, silent = true, desc = "Copy the current request as a curl command" }
       )
@@ -67,15 +67,7 @@ return {
       vim.api.nvim_buf_set_keymap(
         0,
         "n",
-        "<leader>ci",
-        "<cmd>lua require('kulala').from_curl()<cr>",
-        { noremap = true, silent = true, desc = "Paste curl from clipboard as http request" }
-      )
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "<leader>ci",
+        "<leader>rp",
         "<cmd>lua require('kulala').from_curl()<cr>",
         { noremap = true, silent = true, desc = "Paste curl from clipboard as http request" }
       )
