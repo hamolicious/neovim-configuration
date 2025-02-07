@@ -3,17 +3,36 @@ return {
     'mistweaverco/kulala.nvim',
     ft = { "http" },
     opts = {
+      -- TODO: this doesn't seem to work
       scratchpad_default_contents = {
-        "@MY_TOKEN_NAME=my_token_value",
+        "# Static definitions",
+        "@USER_AGENT=quoting-engineer",
+        "@LOCAL_HOST=http://localhost:8080",
+        "@SHADOW_HOST=https://-shadow.vassily.io",
         "",
-        "# @name scratchpad",
-        "POST https://httpbin.org/post HTTP/1.1",
-        "accept: application/json",
-        "content-type: application/json",
+        "# Variables",
+        "@URI={{SHADOW_HOST}}",
         "",
-        "{",
-        '  "foo": "bar"',
-        "}",
+        "###",
+        "# @name auth",
+        "POST https://identity-signin-core.shadow.ctmers.io/connect/token HTTP/1.1",
+        "User-Agent: {{USER_AGENT}}",
+        "Content-Type: application/x-www-form-urlencoded",
+        "Accept: application/json",
+        "",
+        "client_id={{ENV_VAR_CLIENT_ID}}&",
+        "client_secret={{ENV_VAR_CLIENT_SECRET}}&",
+        "grant_type=client_credentials&",
+        "scope=<scope>",
+        "",
+        "",
+        "###",
+        "# @name results",
+        "GET {{URI}}/liveness HTTP/1.1",
+        "User-Agent: {{USER_AGENT}}",
+        "Accept: application/json",
+        "Authorization: Bearer {{auth.response.body.access_token}}",
+        "ctm-user-agent: {{USER_AGENT}}",
       },
     },
     config = function()
@@ -54,6 +73,22 @@ return {
         "rt",
         "<cmd>lua require('kulala').toggle_view()<cr>",
         { noremap = true, silent = true, desc = "Toggle between body and headers" }
+      )
+
+      vim.api.nvim_buf_set_keymap(
+        0,
+        "n",
+        "<leader>fr",
+        "<cmd>lua require('kulala').search()<cr>",
+        { noremap = true, silent = true, desc = "Find requests" }
+      )
+
+      vim.api.nvim_buf_set_keymap(
+        0,
+        "n",
+        "<leader>sp",
+        "<cmd>lua require('kulala').scratchpad()<cr>",
+        { noremap = true, silent = true, desc = "Open request scratchpad" }
       )
 
       vim.api.nvim_buf_set_keymap(
