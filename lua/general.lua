@@ -1,4 +1,9 @@
 -- set syntax highlight for http files
+vim.filetype.add({
+  extension = {
+    ['http'] = 'http',
+  },
+})
 vim.cmd('autocmd BufNewFile,BufRead *.http set filetype=http')
 vim.cmd('autocmd FileType http TSEnable highlight')
 
