@@ -11,6 +11,7 @@ return {
 				'pyright',
 				'lua_ls',
 				'ts_ls',
+				'ast_grep',
 				-- not a valid entry?!
 				-- 'eslint_d',
 				-- 'prettierd',
@@ -27,6 +28,7 @@ return {
 		require('lspconfig').docker_compose_language_service.setup({})
 		require('lspconfig').dockerls.setup({})
 		require('lspconfig').gitlab_ci_ls.setup({})
+		require('lspconfig').ast_grep.setup({})
 	end
 
 }
