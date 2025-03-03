@@ -8,7 +8,7 @@ return {
 				local configs = require("nvim-treesitter.configs")
 
 				configs.setup({
-					ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "python", "javascript", "html" },
+					ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "python", "javascript", "html", "c_sharp" },
 					ignore_install = { "help", "man" },  -- Add the file types you want to ignore
 					sync_install = false,
 					highlight = {
