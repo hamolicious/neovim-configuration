@@ -36,6 +36,8 @@ return {
   },
   init = function()
     local min_num_lines = 30
+    local minimap_width = 20
+    local min_minimap_width = minimap_width * 3
 
     vim.opt.wrap = false
     vim.opt.sidescrolloff = 36
@@ -45,6 +47,14 @@ return {
 
       buf_filter = function(bufnr)
         if (vim.api.nvim_buf_line_count(bufnr) < min_num_lines) then
+          return false
+        end
+
+        return true
+      end,
+
+      win_filter = function(winid)
+        if (vim.api.nvim_win_get_width(winid) < min_minimap_width) then
           return false
         end
 
@@ -66,6 +76,19 @@ return {
       },
 
       layout = "float",
+      float = {
+        minimap_width = minimap_width,
+        max_minimap_height = nil,
+
+        margin = {
+          right = 0,
+          top = 0,
+          bottom = 0,
+        },
+        z_index = 1,
+
+        window_border = "single",
+      },
 
       git = {
         enabled = true,
