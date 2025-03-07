@@ -3,7 +3,18 @@
 local function centered_filename()
   local width = vim.api.nvim_win_get_width(0)
   local filename = vim.fn.fnamemodify(vim.fn.bufname('%'), ':t')
-  local content = string.format('《 %s 》', filename)
+  if filename == '' then
+    filename = '[No Name]'
+  end
+
+  local state = ' '
+  if vim.bo.modified then
+    state = ' ● '
+  elseif vim.bo.readonly then
+    state = '  '
+  end
+
+  local content = string.format('《 %s%s 》', filename, state)
 
   if #content >= width then
     return content
@@ -12,6 +23,7 @@ local function centered_filename()
   local padding = math.floor((width - #content) / 2)
   return string.rep(' ', padding) .. content
 end
+
 
 return {
   'nvim-lualine/lualine.nvim',
