@@ -11,62 +11,48 @@ local dynamicn = ls.dynamic_node
 local date_yyyy_mm_dd = function() return { os.date('%Y-%m-%d') } end
 
 ls.add_snippets(nil, {
-	all = {
-		snip({
-			trig = "date",
-			namr = "Date YYYY-MM-DD",
-			dscr = "Date in the form of YYYY-MM-DD",
-		}, {
-			func(date_yyyy_mm_dd, {}),
-		}),
-		snip({
-			trig = "ham",
-			namr = "ham  hamolicious",
-			dscr = "Expand hamolicious",
-		}, {
-			text('hamolicious')
-		}),
-		snip({
-			trig = "vp",
-			namr = "vp  viktors patmalnieks",
-			dscr = "Expand viktors patmalnieks",
-		}, {
-			text('viktors patmalnieks')
-		}),
-		snip({
-			trig = "[]",
-			namr = "[]  - [ ]",
-			dscr = "Expand md brackets",
-		}, {
-			text('- [ ]')
-		}),
-		snip({
-			trig = "[x]",
-			namr = "[x]  - [x]",
-			dscr = "Expand md brackets",
-		}, {
-			text('- [x]')
-		}),
-		-- left as an example
-		snip({
-				trig = "meta",
-				namr = "Metadata",
-				dscr = "Yaml metadata format for markdown"
-			},
-			{
-				text({ "---", "title: " }),
-				insert(1, "note_title"),
-				text({ "", "author: " }),
-				insert(2, "author"),
-				text({ "", "date: " }),
-				func(date_yyyy_mm_dd, {}),
-				text({ "", "categories: [" }), insert(3, ""),
-				text({ "]", "lastmod: " }),
-				func(date_yyyy_mm_dd, {}),
-				text({ "", "tags: [" }),
-				insert(4),
-				text({ "]", "comments: true", "---", "" }),
-				insert(0)
-			}),
-	},
+  all = {
+    snip({
+      trig = "date",
+      namr = "Date YYYY-MM-DD",
+      dscr = "Date in the form of YYYY-MM-DD",
+    }, {
+      func(date_yyyy_mm_dd, {}),
+    }),
+    snip({
+      trig = "ham",
+      namr = "ham  hamolicious",
+      dscr = "Expand hamolicious",
+    }, {
+      text('hamolicious')
+    }),
+    snip({
+      trig = "vp",
+      namr = "vp  viktors patmalnieks",
+      dscr = "Expand viktors patmalnieks",
+    }, {
+      text('viktors patmalnieks')
+    }),
+    -- left as an example
+    snip({
+        trig = "meta",
+        namr = "Metadata",
+        dscr = "Yaml metadata format for markdown"
+      },
+      {
+        text({ "---", "title: " }),
+        insert(1, "note_title"),
+        text({ "", "author: " }),
+        insert(2, "author"),
+        text({ "", "date: " }),
+        func(date_yyyy_mm_dd, {}),
+        text({ "", "categories: [" }), insert(3, ""),
+        text({ "]", "lastmod: " }),
+        func(date_yyyy_mm_dd, {}),
+        text({ "", "tags: [" }),
+        insert(4),
+        text({ "]", "comments: true", "---", "" }),
+        insert(0)
+      }),
+  },
 })
