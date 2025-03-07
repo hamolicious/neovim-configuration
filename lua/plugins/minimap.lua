@@ -35,16 +35,28 @@ return {
     { "<leader>ns",  "<cmd>Neominimap toggleFocus<cr>", desc = "Switch focus on minimap" },
   },
   init = function()
+    local min_num_lines = 30
+
     vim.opt.wrap = false
     vim.opt.sidescrolloff = 36
 
     vim.g.neominimap = {
       auto_enable = true,
+
+      buf_filter = function(bufnr)
+        if (vim.api.nvim_buf_line_count(bufnr) < min_num_lines) then
+          return false
+        end
+
+        return true
+      end,
+
       exclude_filetypes = {
         "help",
         "bigfile",
         "oil",
       },
+
       exclude_buftypes = {
         "nofile",
         "nowrite",
@@ -52,6 +64,7 @@ return {
         "terminal",
         "prompt",
       },
+
       layout = "float",
 
       git = {
