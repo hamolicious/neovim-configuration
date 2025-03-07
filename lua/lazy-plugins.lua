@@ -58,6 +58,7 @@ local function getPlugins()
     coroutine.yield(require('plugins.autoclose'))           -- automatically close brackets
     coroutine.yield(require('plugins.markdown-preview'))    -- Live markdown preview
     coroutine.yield(require('plugins.increment-decrement')) -- Toggle bools, weekdays, on off and yes, no
+    coroutine.yield(require('plugins.minimap'))             -- VSCode style minimap
 
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       coroutine.yield(require('plugins.chatgpt'))         -- chatgpt integration
