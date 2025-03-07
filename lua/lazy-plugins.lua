@@ -62,6 +62,7 @@ local function getPlugins()
     coroutine.yield(require('plugins.markdown-preview'))    -- Live markdown preview
     coroutine.yield(require('plugins.increment-decrement')) -- Toggle bools, weekdays, on off and yes, no
     coroutine.yield(require('plugins.minimap'))             -- VSCode style minimap
+    coroutine.yield(require('plugins.karen-yank'))          -- Nicer register experience when deleting, cutting and yanking
 
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       coroutine.yield(require('plugins.chatgpt'))         -- chatgpt integration
