@@ -33,9 +33,6 @@ return {
         -- src: https://github.com/jesseduffield/lazygit
         { '<leader><leader>l', '<cmd>FloatermNew --title=LazyGit --autoclose=2 lazygit<cr>',                                                             description = 'Open lazygit' },
 
-        -- src: https://github.com/Rigellute/spotify-tui
-        { '<leader><leader>s', '<cmd>FloatermNew --title=Spotify --autoclose=2 spt<cr>',                                                                 description = 'Open Spotify' },
-
         -- src: https://github.com/jesseduffield/lazydocker
         { '<leader><leader>d', '<cmd>FloatermNew --title=Docker --autoclose=2 lazydocker<cr>',                                                           description = 'Open lazydocker' },
 

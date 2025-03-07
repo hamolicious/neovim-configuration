@@ -27,7 +27,4 @@ brew install lazygit
 
 # `<leader><leader>d` for docker operations
 brew install lazydocker
-
-# `<leader><leader>s` for spotify operations # TODO: remove dis
-brew install spotify-tui
 ```
