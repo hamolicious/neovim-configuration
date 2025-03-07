@@ -37,7 +37,7 @@ return {
       text = '👉', -- Replace with your desired symbol
       texthl = '', -- Highlight group (optional)
       linehl = 'DapStoppedLine', -- Line highlight group (optional)
-      numhl = '' -- Number highlight group (optional)
+      numhl = 'DapStoppedLine' -- Number highlight group (optional)
     })
 
     vim.cmd([[
