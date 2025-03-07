@@ -120,7 +120,7 @@ return {
         mode = "icon",
         priority = 10,
         key = "m",
-        show_builtins = false,
+        show_builtins = true,
       },
 
       fold = {
