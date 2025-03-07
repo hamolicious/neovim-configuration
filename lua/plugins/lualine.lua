@@ -1,5 +1,18 @@
 -- TODO: add python venvs
 
+local function centered_filename()
+  local width = vim.api.nvim_win_get_width(0)
+  local filename = vim.fn.fnamemodify(vim.fn.bufname('%'), ':t')
+  local content = string.format('《 %s 》', filename)
+
+  if #content >= width then
+    return content
+  end
+
+  local padding = math.floor((width - #content) / 2)
+  return string.rep(' ', padding) .. content
+end
+
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -37,11 +50,11 @@ return {
           'dap-repl'
         },
         always_divide_middle = true,
-        globalstatus = false,
+        globalstatus = true,
         refresh = {
           statusline = 1000,
           tabline = 1000,
-          winbar = 1000,
+          winbar = 250,
         }
       },
 
@@ -69,19 +82,13 @@ return {
       winbar = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = { {
-          'filename',
-          file_status = true,
-          newfile_status = true,
-          path = 1,
-          shorting_target = 0,
-          symbols = {
-            modified = '- modified',
-            readonly = '- readonly',
-            unnamed = 'can\'t remember',
-            newfile = '- new file',
-          }
-        } },
+        lualine_c = {
+          {
+            'filename',
+            path = 1,
+            fmt = centered_filename,
+          },
+        },
         lualine_x = {},
         lualine_y = {},
         lualine_z = {}
@@ -93,10 +100,8 @@ return {
         lualine_c = {
           {
             'filename',
-            file_status = true,
-            newfile_status = true,
             path = 1,
-            shorting_target = 0,
+            fmt = centered_filename,
           },
         },
         lualine_x = {},
