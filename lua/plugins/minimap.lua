@@ -1,3 +1,5 @@
+-- source https://github.com/Isrothy/neominimap.nvim
+
 return {
   'Isrothy/neominimap.nvim',
   dependencies = {
