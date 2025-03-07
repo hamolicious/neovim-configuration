@@ -14,9 +14,10 @@ return {
       keymaps = {
         -- Debugging
 
-        { '<leader>db',        '<cmd> DapToggleBreakpoint <CR>',                                                                                         description = 'Toggle Breakpoint' },
-        { '<leader>dr',        '<cmd> DapContinue <CR>',                                                                                                 description = 'Start/Continue Debugger' },
-        { '<leader>dt',        '<cmd> DapTerminate <CR>',                                                                                                description = 'Terminate Debugging Session' },
+        { '<leader>db',        '<cmd> DapToggleBreakpoint <CR>',                                                                                         description = 'Debugger Toggle Breakpoint' },
+        { '<leader>dr',        '<cmd> DapContinue <CR>',                                                                                                 description = 'Debugger Run' },
+        { '<leader>dt',        '<cmd> DapTerminate <CR>',                                                                                                description = 'Debugger Terminate Session' },
+        { '<leader>dx',        '<cmd> DapClearBreakpoints <CR>',                                                                                         description = 'Debugger Clear Breakpoints' },
 
 
         -- Telescope
