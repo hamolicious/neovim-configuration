@@ -80,20 +80,32 @@ return {
         window_border = "single",
       },
 
+      click = {
+        enabled = true,
+        auto_switch_focus = true,
+      },
+
+      diagnostic = {
+        enabled = true,
+        severity = vim.diagnostic.severity.WARN,
+        mode = "line",
+        priority = {
+          ERROR = 100,
+          WARN = 90,
+          INFO = 80,
+          HINT = 70,
+        },
+      },
+
       git = {
         enabled = true,
         mode = "sign",
         priority = 6,
-        icon = {
-          add = "+ ",
-          change = "~ ",
-          delete = "- ",
-        },
       },
 
       search = {
         enabled = true,
-        mode = "line",
+        mode = "icon",
         priority = 20,
         icon = "󰱽 ",
       },
