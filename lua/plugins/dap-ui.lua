@@ -11,8 +11,8 @@ return {
 
     dapui.setup({
       floating = {
-        max_height = 0.8, -- Customize the max height
-        max_width = 0.8,  -- Customize the max width
+        max_height = 0.8,
+        max_width = 0.8,
       },
     })
 

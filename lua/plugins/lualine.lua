@@ -11,10 +11,31 @@ return {
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = {
-          statusline = {},
-          winbar = {},
+          statusline = {
+            'dap-watches',
+            'dap-stacks',
+            'dap-breakpoints',
+            'dap-scopes',
+            'dap-console',
+            'dap-repl'
+          },
+          winbar = {
+            'dap-watches',
+            'dap-stacks',
+            'dap-breakpoints',
+            'dap-scopes',
+            'dap-console',
+            'dap-repl'
+          },
         },
-        ignore_focus = {},
+        ignore_focus = {
+          'dap-watches',
+          'dap-stacks',
+          'dap-breakpoints',
+          'dap-scopes',
+          'dap-console',
+          'dap-repl'
+        },
         always_divide_middle = true,
         globalstatus = false,
         refresh = {
@@ -22,6 +43,10 @@ return {
           tabline = 1000,
           winbar = 1000,
         }
+      },
+
+      extensions = {
+        'nvim-dap-ui',
       },
 
       sections = {
@@ -78,9 +103,13 @@ return {
         lualine_y = {},
         lualine_z = {}
       },
-      extensions = {
-        'nvim-dap-ui',
-      }
+    })
+
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = 'dap-*',
+      callback = function()
+        vim.wo.winbar = nil
+      end
     })
   end,
 }
