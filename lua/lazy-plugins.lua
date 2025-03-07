@@ -43,7 +43,7 @@ local function getPlugins()
     coroutine.yield(require('plugins.lualine'))             -- Lualine
     coroutine.yield(require('plugins.telescope'))           -- Telescope
     coroutine.yield(require('plugins.auto-complete'))       -- nvim-cmp
-    coroutine.yield(require('plugins.git'))                 -- git-tui
+    coroutine.yield(require('plugins.git'))                 -- Git blame, hunk objects
     coroutine.yield(require('plugins.tree-sitter'))         -- tree-sitter
     coroutine.yield(require('plugins.highlight'))           -- highligh occurances
     coroutine.yield(require('plugins.neoscroll'))           -- smooth scrolling

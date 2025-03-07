@@ -13,7 +13,6 @@ return {
 
       keymaps = {
         -- Debugging
-
         { '<leader>db',        '<cmd> DapToggleBreakpoint <CR>',                                                                                         description = 'Debugger Toggle Breakpoint' },
         { '<leader>dr',        '<cmd> DapContinue <CR>',                                                                                                 description = 'Debugger Run' },
         { '<leader>dt',        '<cmd> DapTerminate <CR>',                                                                                                description = 'Debugger Terminate Session' },
@@ -69,6 +68,12 @@ return {
 
         -- Games
         { '<leader>pm',        '<cmd>Nvimesweeper<cr>',                                                                                                  description = 'Play Minesweeper',                                  mode = { 'n', 'v' } },
+
+        -- Git
+        { 'gbl',               '<cmd> Gitsigns blame_line <cr>',                                                                                         description = 'Git Blame Line',                                    mode = { 'n' } },
+        { 'gbb',               '<cmd> Gitsigns blame <cr>',                                                                                              description = 'Git Blame',                                         mode = { 'n' } },
+        { 'hn',                '<cmd> Gitsigns next_hunk <cr>',                                                                                          description = 'Git Goto Next Hunk',                                mode = { 'n' } },
+        { 'hp',                '<cmd> Gitsigns prev_hunk <cr>',                                                                                          description = 'Git Goto Previous Hunk',                            mode = { 'n' } },
 
         -- Gitlink
         { '<leader>gy',        '<cmd>lua require"gitlinker".get_buf_range_url("n")<cr>',                                                                 description = 'Copy Gitlink <current line>',                       mode = { 'n' } },
