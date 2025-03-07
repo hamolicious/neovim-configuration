@@ -40,6 +40,54 @@ return {
 
     vim.g.neominimap = {
       auto_enable = true,
+      exclude_filetypes = {
+        "help",
+        "bigfile",
+        "oil",
+      },
+      exclude_buftypes = {
+        "nofile",
+        "nowrite",
+        "quickfix",
+        "terminal",
+        "prompt",
+      },
+      layout = "float",
+
+      git = {
+        enabled = true,
+        mode = "sign",
+        priority = 6,
+        icon = {
+          add = "+ ",
+          change = "~ ",
+          delete = "- ",
+        },
+      },
+
+      search = {
+        enabled = true,
+        mode = "line",
+        priority = 20,
+        icon = "󰱽 ",
+      },
+
+      treesitter = {
+        enabled = true,
+        priority = 200,
+      },
+
+      mark = {
+        enabled = true,
+        mode = "icon",
+        priority = 10,
+        key = "m",
+        show_builtins = false,
+      },
+
+      fold = {
+        enabled = true,
+      },
     }
   end,
 }
