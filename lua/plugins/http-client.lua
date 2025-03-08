@@ -1,4 +1,9 @@
+-- source https://github.com/rodrigoscc/http.nvim
+
 -- TODO: lualine is fighting http for winbar
+-- TODO: create git repo containing the bellow
+-- TODO: add to cmp config
+
 
 return {
   "rodrigoscc/http.nvim",
