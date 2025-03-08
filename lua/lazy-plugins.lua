@@ -64,6 +64,7 @@ local function getPlugins()
     coroutine.yield(require('plugins.minimap'))             -- VSCode style minimap
     coroutine.yield(require('plugins.karen-yank'))          -- Nicer register experience when deleting, cutting and yanking
     coroutine.yield(require('plugins.macrothis'))           -- Macro management like a boss
+    coroutine.yield(require('plugins.transparent'))         -- Remove all BG color
 
 
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
