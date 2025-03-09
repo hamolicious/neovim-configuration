@@ -18,10 +18,8 @@ return {
       },
     }
 
-    -- I dont want auto formatting on my work machine
     if (not IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
-      setupTable['format_on_save']
-      = {
+      setupTable['format_on_save'] = {
         lsp_fallback = true,
         async = false,
         timeout_ms = 500,
