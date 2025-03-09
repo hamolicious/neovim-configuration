@@ -4,7 +4,6 @@
 -- TODO: create git repo containing the bellow
 -- TODO: add to cmp config
 
-
 return {
   "rodrigoscc/http.nvim",
   config = function()
@@ -14,6 +13,15 @@ return {
       environments_file = "environments.json",
       active_envs_file = vim.fn.stdpath("data") .. "/http/envs.json",
       win_config = { split = "below" },
+    })
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "http",
+      callback = function()
+        local opts = { noremap = true, silent = true, buffer = true }
+
+        vim.keymap.set("n", "<cr>", "<cmd>Http run_closest<cr>", opts)
+      end,
     })
   end,
   build = { ":TSUpdate http2", ":Http update_grammar_queries" },

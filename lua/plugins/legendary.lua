@@ -74,6 +74,8 @@ return {
         -- Http
         { '<leader>hr',        '<cmd>Http run<cr>',                                                                                                      description = 'HTTP Run',                                          mode = { 'n' } },
         { '<leader>he',        '<cmd>Http jump<cr>',                                                                                                     description = 'HTTP Edit Request',                                 mode = { 'n' } },
+        { '<leader>hl',        '<cmd>Http run_last<cr>',                                                                                                 description = 'HTTP Run Last Request',                             mode = { 'n' } },
+        { '<leader>hs',        '<cmd>Http select_env<cr>',                                                                                               description = 'HTTP Select Environment',                           mode = { 'n' } },
 
         -- Gitlink
         { '<leader>gy',        '<cmd>lua require"gitlinker".get_buf_range_url("n")<cr>',                                                                 description = 'Copy Gitlink <current line>',                       mode = { 'n' } },
