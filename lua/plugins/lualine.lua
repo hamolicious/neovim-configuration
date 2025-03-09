@@ -46,7 +46,7 @@ return {
         refresh = {
           statusline = 1000,
           tabline = 50,
-          winbar = 0,
+          winbar = 50,
         }
       },
 
@@ -56,10 +56,10 @@ return {
 
       inactive_sections = {},
 
-      sections = require('lua.plugins.lualinecomponents.global-lualine'),
-      tabline = require('lua.plugins.lualinecomponents.tabline'),
-      winbar = require('lua.plugins.lualinecomponents.winbar'),
-      inactive_winbar = require('lua.plugins.lualinecomponents.inactive-winbar'),
+      sections = require('plugins.lualinecomponents.global-lualine'),
+      tabline = require('plugins.lualinecomponents.tabline'),
+      winbar = require('plugins.lualinecomponents.winbar'),
+      inactive_winbar = require('plugins.lualinecomponents.inactive-winbar'),
     })
 
     vim.api.nvim_create_autocmd('FileType', {
