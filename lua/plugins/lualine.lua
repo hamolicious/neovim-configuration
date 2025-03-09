@@ -68,7 +68,7 @@ return {
         refresh = {
           statusline = 1000,
           tabline = 1000,
-          winbar = 250,
+          winbar = 50,
         }
       },
 
@@ -101,6 +101,7 @@ return {
             'filename',
             path = 1,
             fmt = centered_filename,
+            color = { fg = CustomColors.ACTIVE, bg = '#1e1e1e', gui = 'bold' },
           },
         },
         lualine_x = {},
