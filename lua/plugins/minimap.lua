@@ -26,6 +26,7 @@ return {
   },
   init = function()
     local min_num_lines = 30
+    local max_num_lines = 4069
     local minimap_width = 20
     local min_minimap_width = minimap_width * 3
 
@@ -45,6 +46,14 @@ return {
 
       win_filter = function(winid)
         if (vim.api.nvim_win_get_width(winid) < min_minimap_width) then
+          return false
+        end
+
+        if (vim.api.nvim_win_get_width(winid) > max_num_lines) then
+          return false
+        end
+
+        if not (winid == vim.api.nvim_get_current_win()) then
           return false
         end
 
@@ -127,5 +136,13 @@ return {
         enabled = true,
       },
     }
+
+    vim.api.nvim_create_autocmd("WinEnter", {
+      group = vim.api.nvim_create_augroup("minimap", { clear = true }),
+      pattern = "*",
+      callback = function()
+        require("neominimap").tabRefresh({}, {})
+      end
+    })
   end,
 }
