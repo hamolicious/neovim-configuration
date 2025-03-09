@@ -46,7 +46,7 @@ return {
         refresh = {
           statusline = 1000,
           tabline = 50,
-          winbar = 50,
+          winbar = 0,
         }
       },
 
