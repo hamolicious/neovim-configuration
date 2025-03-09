@@ -19,15 +19,8 @@ export NVIM_PLATFORM='UBUNTU_PC'
 This configuration requires a few 3rd party dependencies. You can install them all using:
 
 ```bash
-# `<leader>fg` to search through code
+sudo apt install jq
 brew install ripgrep
-
-# `<leader><leader>l` for git operations
 brew install lazygit
-
-# `<leader><leader>d` for docker operations
 brew install lazydocker
-
-# `<leader><leader>s` for spotify operations # TODO: remove dis
-brew install spotify-tui
 ```

@@ -35,12 +35,15 @@ local function getPlugins()
     coroutine.yield(require('plugins.lsp'))                 -- Intelisense
     coroutine.yield(require('plugins.formatting'))          -- Formatting
     coroutine.yield(require('plugins.linting'))             -- Formatting
+    coroutine.yield(require('plugins.nvim-dap'))            -- Debugging
+    coroutine.yield(require('plugins.mason-dap'))           -- Debugging
+    coroutine.yield(require('plugins.dap-ui'))              -- Debugging UI
     coroutine.yield(require('plugins.dresser'))             -- Makes legendary bareable to look at
     coroutine.yield(require('plugins.theme'))               -- Theme
     coroutine.yield(require('plugins.lualine'))             -- Lualine
     coroutine.yield(require('plugins.telescope'))           -- Telescope
     coroutine.yield(require('plugins.auto-complete'))       -- nvim-cmp
-    coroutine.yield(require('plugins.git'))                 -- git-tui
+    coroutine.yield(require('plugins.git'))                 -- Git blame, hunk objects
     coroutine.yield(require('plugins.tree-sitter'))         -- tree-sitter
     coroutine.yield(require('plugins.highlight'))           -- highligh occurances
     coroutine.yield(require('plugins.neoscroll'))           -- smooth scrolling
@@ -58,6 +61,11 @@ local function getPlugins()
     coroutine.yield(require('plugins.autoclose'))           -- automatically close brackets
     coroutine.yield(require('plugins.markdown-preview'))    -- Live markdown preview
     coroutine.yield(require('plugins.increment-decrement')) -- Toggle bools, weekdays, on off and yes, no
+    coroutine.yield(require('plugins.minimap'))             -- VSCode style minimap
+    coroutine.yield(require('plugins.macrothis'))           -- Macro management like a boss
+    coroutine.yield(require('plugins.transparent'))         -- Remove all BG color
+    coroutine.yield(require('plugins.leap'))                -- Fast jump to anywhere on the screen
+
 
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       coroutine.yield(require('plugins.chatgpt'))         -- chatgpt integration

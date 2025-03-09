@@ -1,127 +1,34 @@
+-- source https://github.com/rodrigoscc/http.nvim
+
+-- TODO: lualine is fighting http for winbar
+-- TODO: create git repo containing the bellow
+-- TODO: add to cmp config
+
 return {
-  {
-    'mistweaverco/kulala.nvim',
-    ft = { "http" },
-    event = {"BufAdd", "BufEnter", "BufFilePost", "BufNew", "BufNewFile", "BufRead"},
-    config = function()
-      local kulala = require('kulala');
+  "rodrigoscc/http.nvim",
+  config = function()
+    require("http-nvim").setup({
+      http_dir = vim.fn.expand("~/.http"),
+      hooks_file = "hooks.lua",
+      environments_file = "environments.json",
+      active_envs_file = vim.fn.stdpath("data") .. "/http/envs.json",
+      win_config = { split = "below" },
+    })
 
-      kulala.setup({
-        -- q_to_close_float = true,
-        -- display_mode = "float",
-        default_winbar_panes = { "all", "body", "headers", "headers_body", "verbose" },
-        icons = {
-          inlay = {
-            loading = "⏳",
-            done = "✅",
-            error = "❌",
-          },
-          lualine = "🐼",
-        },
-        winbar = true,
-        scratchpad_default_contents = {
-          "# Static definitions",
-          "@USER_AGENT=quoting-engineer",
-          "@LOCAL_HOST=http://localhost:8080",
-          "@SHADOW_HOST=https://-shadow.vassily.io",
-          "",
-          "# Variables",
-          "@URI={{SHADOW_HOST}}",
-          "",
-          "###",
-          "# @name auth",
-          "POST https://identity-signin-core.shadow.ctmers.io/connect/token HTTP/1.1",
-          "User-Agent: {{USER_AGENT}}",
-          "Content-Type: application/x-www-form-urlencoded",
-          "Accept: application/json",
-          "",
-          "client_id={{ENV_VAR_CLIENT_ID}}&",
-          "client_secret={{ENV_VAR_CLIENT_SECRET}}&",
-          "grant_type=client_credentials&",
-          "scope=<scope>",
-          "",
-          "",
-          "###",
-          "# @name results",
-          "GET {{URI}}/liveness HTTP/1.1",
-          "User-Agent: {{USER_AGENT}}",
-          "Accept: application/json",
-          "Authorization: Bearer {{auth.response.body.access_token}}",
-          "ctm-user-agent: {{USER_AGENT}}",
-        },
-      })
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "http",
+      callback = function()
+        local opts = { noremap = true, silent = true, buffer = true }
 
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "<CR>",
-        "<cmd>lua require('kulala').run()<cr>",
-        { noremap = true, silent = true, desc = "Execute the request" }
-      )
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "{",
-        "<cmd>lua require('kulala').jump_prev()<cr>",
-        { noremap = true, silent = true, desc = "Jump to the previous request" }
-      )
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "}",
-        "<cmd>lua require('kulala').jump_next()<cr>",
-        { noremap = true, silent = true, desc = "Jump to the next request" }
-      )
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "ri",
-        "<cmd>lua require('kulala').inspect()<cr>",
-        { noremap = true, silent = true, desc = "Inspect the current request" }
-      )
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "rt",
-        "<cmd>lua require('kulala').toggle_view()<cr>",
-        { noremap = true, silent = true, desc = "Toggle between body and headers" }
-      )
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "<leader>fr",
-        "<cmd>lua require('kulala').search()<cr>",
-        { noremap = true, silent = true, desc = "Find requests" }
-      )
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "<leader>sp",
-        "<cmd>lua require('kulala').scratchpad()<cr>",
-        { noremap = true, silent = true, desc = "Open request scratchpad" }
-      )
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "<leader>ry",
-        "<cmd>lua require('kulala').copy()<cr>",
-        { noremap = true, silent = true, desc = "Copy the current request as a curl command" }
-      )
-
-      vim.api.nvim_buf_set_keymap(
-        0,
-        "n",
-        "<leader>rp",
-        "<cmd>lua require('kulala').from_curl()<cr>",
-        { noremap = true, silent = true, desc = "Paste curl from clipboard as http request" }
-      )
-    end
+        vim.keymap.set("n", "<cr>", "<cmd>Http run_closest<cr>", opts)
+      end,
+    })
+  end,
+  build = { ":TSUpdate http2", ":Http update_grammar_queries" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-telescope/telescope.nvim",
+    "ibhagwan/fzf-lua",
   },
 }

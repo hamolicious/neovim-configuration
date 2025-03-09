@@ -12,6 +12,12 @@ return {
       },
 
       keymaps = {
+        -- Debugging
+        { '<leader>db',        '<cmd> DapToggleBreakpoint <CR>',                                                                                         description = 'Debugger Toggle Breakpoint' },
+        { '<leader>dr',        '<cmd> DapContinue <CR>',                                                                                                 description = 'Debugger Run' },
+        { '<leader>dt',        '<cmd> DapTerminate <CR>',                                                                                                description = 'Debugger Terminate Session' },
+        { '<leader>dx',        '<cmd> DapClearBreakpoints <CR>',                                                                                         description = 'Debugger Clear Breakpoints' },
+
         -- Telescope
         { '<leader>ff',        ':Telescope find_files<cr>',                                                                                              description = 'Telescope find files' },
         { '<leader>fr',        ':Telescope registers<cr>',                                                                                               description = 'Telescope find registers' },
@@ -25,9 +31,6 @@ return {
         -- Floating terminals
         -- src: https://github.com/jesseduffield/lazygit
         { '<leader><leader>l', '<cmd>FloatermNew --title=LazyGit --autoclose=2 lazygit<cr>',                                                             description = 'Open lazygit' },
-
-        -- src: https://github.com/Rigellute/spotify-tui
-        { '<leader><leader>s', '<cmd>FloatermNew --title=Spotify --autoclose=2 spt<cr>',                                                                 description = 'Open Spotify' },
 
         -- src: https://github.com/jesseduffield/lazydocker
         { '<leader><leader>d', '<cmd>FloatermNew --title=Docker --autoclose=2 lazydocker<cr>',                                                           description = 'Open lazydocker' },
@@ -62,6 +65,18 @@ return {
         -- Games
         { '<leader>pm',        '<cmd>Nvimesweeper<cr>',                                                                                                  description = 'Play Minesweeper',                                  mode = { 'n', 'v' } },
 
+        -- Git
+        { 'gbl',               '<cmd> Gitsigns blame_line <cr>',                                                                                         description = 'Git Blame Line',                                    mode = { 'n' } },
+        { 'gbb',               '<cmd> Gitsigns blame <cr>',                                                                                              description = 'Git Blame',                                         mode = { 'n' } },
+        { 'hn',                '<cmd> Gitsigns next_hunk <cr>',                                                                                          description = 'Git Goto Next Hunk',                                mode = { 'n' } },
+        { 'hp',                '<cmd> Gitsigns prev_hunk <cr>',                                                                                          description = 'Git Goto Previous Hunk',                            mode = { 'n' } },
+
+        -- Http
+        { '<leader>hr',        '<cmd>Http run<cr>',                                                                                                      description = 'HTTP Run',                                          mode = { 'n' } },
+        { '<leader>he',        '<cmd>Http jump<cr>',                                                                                                     description = 'HTTP Edit Request',                                 mode = { 'n' } },
+        { '<leader>hl',        '<cmd>Http run_last<cr>',                                                                                                 description = 'HTTP Run Last Request',                             mode = { 'n' } },
+        { '<leader>hs',        '<cmd>Http select_env<cr>',                                                                                               description = 'HTTP Select Environment',                           mode = { 'n' } },
+
         -- Gitlink
         { '<leader>gy',        '<cmd>lua require"gitlinker".get_buf_range_url("n")<cr>',                                                                 description = 'Copy Gitlink <current line>',                       mode = { 'n' } },
         { '<leader>gb',        '<cmd>lua require"gitlinker".get_buf_range_url("n", {action_callback = require"gitlinker.actions".open_in_browser})<cr>', description = 'Copy Gitlink <current line, open in browser>',      mode = { 'n' } },
@@ -87,7 +102,6 @@ return {
           description = 'Format file',
           mode = { 'n', 'v' }
         },
-
 
         -- Registers
         { 'Q', '@q', description = 'Play the q register' },
