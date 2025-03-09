@@ -1,28 +1,5 @@
 -- TODO: add python venvs
 
-local function centered_filename()
-  local width = vim.api.nvim_win_get_width(0)
-  local filename = vim.fn.fnamemodify(vim.fn.bufname('%'), ':t')
-  if filename == '' then
-    filename = '[No Name]'
-  end
-
-  local state = ' '
-  if vim.bo.modified then
-    state = ' ● '
-  elseif vim.bo.readonly then
-    state = '  '
-  end
-
-  local content = string.format('《 %s%s 》', filename, state)
-
-  if #content >= width then
-    return content
-  end
-
-  local padding = math.floor((width - #content) / 2)
-  return string.rep(' ', padding) .. content
-end
 
 
 return {
@@ -35,6 +12,7 @@ return {
         theme = 'auto',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
+
         disabled_filetypes = {
           statusline = {
             'dap-watches',
@@ -67,7 +45,7 @@ return {
         globalstatus = true,
         refresh = {
           statusline = 1000,
-          tabline = 1000,
+          tabline = 50,
           winbar = 50,
         }
       },
@@ -76,53 +54,12 @@ return {
         'nvim-dap-ui',
       },
 
-      sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch' },
-        lualine_c = { 'diff', 'diagnostics' },
-        lualine_x = { 'encoding',
-          {
-            'fileformat',
-            colored = true,
-            icon_only = true,
-          }
-        },
-        lualine_y = { 'filetype' },
-        lualine_z = { 'datetime' },
-      },
       inactive_sections = {},
-      tabline = {},
 
-      winbar = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = {
-          {
-            'filename',
-            path = 1,
-            fmt = centered_filename,
-            color = { fg = CustomColors.ACTIVE, bg = '#1e1e1e', gui = 'bold' },
-          },
-        },
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {}
-      },
-
-      inactive_winbar = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = {
-          {
-            'filename',
-            path = 1,
-            fmt = centered_filename,
-          },
-        },
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {}
-      },
+      sections = require('lua.plugins.lualinecomponents.global-lualine'),
+      tabline = require('lua.plugins.lualinecomponents.tabline'),
+      winbar = require('lua.plugins.lualinecomponents.winbar'),
+      inactive_winbar = require('lua.plugins.lualinecomponents.inactive-winbar'),
     })
 
     vim.api.nvim_create_autocmd('FileType', {
