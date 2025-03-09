@@ -22,20 +22,20 @@ function CenteredFilenameComponent()
   return string.rep(' ', padding) .. content
 end
 
+local filename_component = {
+  'filename',
+  path  = 1,
+  fmt   = CenteredFilenameComponent,
+  color = { fg = CustomColors.ACTIVE, bg = CustomColors.BG, gui = 'bold' },
+}
+
 local winbar_config = {
   lualine_a = {},
   lualine_b = {},
-  lualine_c = {
-    {
-      'filename',
-      path = 1,
-      fmt = CenteredFilenameComponent,
-      color = { fg = CustomColors.ACTIVE, bg = CustomColors.BG, gui = 'bold' },
-    },
-  },
+  lualine_c = { filename_component },
   lualine_x = {},
   lualine_y = {},
-  lualine_z = {}
+  lualine_z = {},
 }
 
 return winbar_config
