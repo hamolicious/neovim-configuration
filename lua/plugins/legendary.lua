@@ -93,7 +93,11 @@ return {
         {
           '<leader>bf',
           function()
-            vim.lsp.buf.format()
+            require('conform').format({
+              lsp_fallback = true,
+              async = false,
+              timeout_ms = 500,
+            })
           end,
           description = 'Format file',
           mode = { 'n', 'v' }
