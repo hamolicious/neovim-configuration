@@ -9,7 +9,7 @@ return {
   "rodrigoscc/http.nvim",
   config = function()
     require("http-nvim").setup({
-      http_dir = "~/.http",
+      http_dir = vim.fn.expand("~/.http"),
       hooks_file = "hooks.lua",
       environments_file = "environments.json",
       active_envs_file = vim.fn.stdpath("data") .. "/http/envs.json",
