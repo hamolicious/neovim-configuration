@@ -42,7 +42,7 @@ return {
             'dap-breakpoints',
             'dap-scopes',
             'dap-console',
-            'dap-repl'
+            'dap-repl',
           },
           winbar = {
             'dap-watches',
@@ -50,7 +50,8 @@ return {
             'dap-breakpoints',
             'dap-scopes',
             'dap-console',
-            'dap-repl'
+            'dap-repl',
+            'oil',
           },
         },
         ignore_focus = {
@@ -59,7 +60,8 @@ return {
           'dap-breakpoints',
           'dap-scopes',
           'dap-console',
-          'dap-repl'
+          'dap-repl',
+          'oil',
         },
         always_divide_middle = true,
         globalstatus = true,
