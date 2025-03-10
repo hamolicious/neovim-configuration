@@ -1,4 +1,5 @@
 local ls = require("luasnip")
+
 -- some shorthands...
 local snip = ls.snippet
 local node = ls.snippet_node
@@ -62,6 +63,15 @@ ls.add_snippets(nil, {
       {
         text('@request.before_hook = '),
         insert(1, 'ask_for_confirmation')
+      }),
+
+    snip({
+        trig = "variable",
+        namr = "@requestVar=",
+        dscr = "Request Variable"
+      },
+      {
+        text('@request.before_hook = ',insert(1, 'ask_for_confirmation')),
       }),
 
     snip({
