@@ -1,3 +1,5 @@
+-- source https://github.com/rodrigoscc/http.nvim
+
 local ls = require("luasnip")
 
 -- some shorthands...
