@@ -72,12 +72,14 @@ return {
         { 'hp',                '<cmd> Gitsigns prev_hunk <cr>',                                                                                          description = 'Git Goto Previous Hunk',                            mode = { 'n' } },
 
         -- Http
-        { '<leader>hr',        '<cmd>Http run<cr>',                                                                                                      description = 'HTTP Run',                                          mode = { 'n' } },
-        { '<leader>he',        '<cmd>Http jump<cr>',                                                                                                     description = 'HTTP Edit Request',                                 mode = { 'n' } },
-        { '<leader>hl',        '<cmd>Http run_last<cr>',                                                                                                 description = 'HTTP Run Last Request',                             mode = { 'n' } },
-        { '<leader>hs',        '<cmd>Http select_env<cr>',                                                                                               description = 'HTTP Select Environment',                           mode = { 'n' } },
-        { '<leader>hi',        '<cmd>Http inspect<cr>',                                                                                                  description = 'HTTP Inspect',                                      mode = { 'n' } },
-        { '<leader>hi',        '<cmd>Http inspect<cr>',                                                                                                  description = 'HTTP Inspect',                                      mode = { 'n' } },
+        { '<leader>rr',        '<cmd>Http run<cr>',                                                                                                      description = 'HTTP Run',                                          mode = { 'n' } },
+        { '<leader>re',        '<cmd>Http jump<cr>',                                                                                                     description = 'HTTP Edit Request',                                 mode = { 'n' } },
+        { '<leader>rl',        '<cmd>Http run_last<cr>',                                                                                                 description = 'HTTP Run Last Request',                             mode = { 'n' } },
+        { '<leader>rs',        '<cmd>Http select_env<cr>',                                                                                               description = 'HTTP Select Environment',                           mode = { 'n' } },
+        { '<leader>ri',        '<cmd>Http inspect<cr>',                                                                                                  description = 'HTTP Inspect',                                      mode = { 'n' } },
+        { '<leader>ror',       '<cmd>Http jump<cr>',                                                                                                     description = 'HTTP Open Request',                                 mode = { 'n' } },
+        { '<leader>roe',       '<cmd>Http open_env<cr>',                                                                                                 description = 'HTTP Open Environment',                             mode = { 'n' } },
+        { '<leader>roh',       '<cmd>Http open_hooks<cr>',                                                                                               description = 'HTTP Open Hooks',                                   mode = { 'n' } },
 
         -- Gitlink
         { '<leader>gy',        '<cmd>lua require"gitlinker".get_buf_range_url("n")<cr>',                                                                 description = 'Copy Gitlink <current line>',                       mode = { 'n' } },
