@@ -66,10 +66,8 @@ local function getPlugins()
     coroutine.yield(require('plugins.transparent'))         -- Remove all BG color
     coroutine.yield(require('plugins.leap'))                -- Fast jump to anywhere on the screen
 
-
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
-      coroutine.yield(require('plugins.chatgpt'))         -- chatgpt integration
-      coroutine.yield(require('plugins.llmautocomplete')) -- use LLMs to auto complete code
+      coroutine.yield(require('plugins.codecompanion')) -- LLM, agentic code assistant
     end
   end)
 end

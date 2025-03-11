@@ -6,7 +6,7 @@ return {
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-cmdline' },
-    { 'milanglacier/minuet-ai.nvim' },
+    { 'olimorris/codecompanion.nvim' },
   },
   config = function()
     local cmp = require('cmp')
@@ -29,12 +29,12 @@ return {
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       }),
       sources = cmp.config.sources({
-        { name = 'minuet' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
         { name = 'luasnip' },
         { name = 'buffer',                 keyword_length = 3 },
+        { name = 'codecompanion' }
       })
     })
 

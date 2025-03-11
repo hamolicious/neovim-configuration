@@ -39,10 +39,8 @@ return {
         { '<leader><leader>n', '<cmd>FloatermNew --title=MiniNeovim --autoclose=2 nvim .<cr>',                                                           description = 'Create temp neovim instance' },
 
         -- AI
-        { '<leader>aa',        '<cmd>ChatGPT<cr>',                                                                                                       description = 'Open ChatGPT',                                      mode = { 'n', 'v' } },
-        { '<leader>ai',        '<cmd>ChatGPTEditWithInstructions<cr>',                                                                                   description = 'ChatGPT with instructions',                         mode = { 'n', 'v' } },
-        { '<leader>av',        '<cmd>Minuet virtualtext toggle<cr>',                                                                                     description = 'Toggle AI virtual text prompts',                    mode = { 'n', 'v' } },
-        { '<leader>ac',        '<cmd>Minuet cmp toggle<cr>',                                                                                             description = 'Toggle AI cmp prompts ',                            mode = { 'n', 'v' } },
+        { '<leader>ac',        '<cmd>CodeCompanionChat Toggle<cr>',                                                                                      description = 'Toggle AI chat session',                            mode = { 'n', 'v' } },
+        { '<leader>ar',        '<cmd>CodeCompanionActions<cr>',                                                                                          description = 'Activate AI code actions',                          mode = { 'n', 'v' } },
 
         -- src:
         { '<leader>tn',        '<cmd>UploadNote<cr>',                                                                                                    description = 'Take Trilum Note',                                  mode = { 'n', 'v' } },
