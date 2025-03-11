@@ -68,15 +68,6 @@ ls.add_snippets(nil, {
       }),
 
     snip({
-        trig = "variable",
-        namr = "@requestVar=",
-        dscr = "Request Variable"
-      },
-      {
-        text('@request.before_hook = ',insert(1, 'ask_for_confirmation')),
-      }),
-
-    snip({
         trig = "#",
         namr = "Request split",
         dscr = "Insert `###` request splitter"
