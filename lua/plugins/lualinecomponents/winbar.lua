@@ -1,8 +1,16 @@
 function CenteredFilenameComponent()
   local width = vim.api.nvim_win_get_width(0)
-  local filename = vim.fn.fnamemodify(vim.fn.bufname('%'), ':t')
-  if filename == '' then
+
+  local filename_wo_path = vim.fn.fnamemodify(vim.fn.bufname('%'), ':t')
+  local filename_w_path = vim.fn.fnamemodify(vim.fn.bufname('%'), ':~:.')
+  local filename = ''
+
+  if filename_wo_path == '' then
     filename = '[No Name]'
+  elseif filename_w_path:len() >= width then
+    filename = filename_wo_path
+  else
+    filename = filename_w_path
   end
 
   local state = ' '
