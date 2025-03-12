@@ -68,6 +68,7 @@ return {
         { 'gbb',               '<cmd> Gitsigns blame <cr>',                                                                                              description = 'Git Blame',                                         mode = { 'n' } },
         { 'hn',                '<cmd> Gitsigns next_hunk <cr>',                                                                                          description = 'Git Goto Next Hunk',                                mode = { 'n' } },
         { 'hp',                '<cmd> Gitsigns prev_hunk <cr>',                                                                                          description = 'Git Goto Previous Hunk',                            mode = { 'n' } },
+        { '<leader>gg',        '<cmd>GitignoreGenerate<cr>',                                                                                             description = 'Generate .gitignore',                               mode = { 'n' } },
 
         -- Http
         { '<leader>rr',        '<cmd>Http run<cr>',                                                                                                      description = 'HTTP Run',                                          mode = { 'n' } },

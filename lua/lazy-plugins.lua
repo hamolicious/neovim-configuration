@@ -66,6 +66,7 @@ local function getPlugins()
     coroutine.yield(require('plugins.transparent'))         -- Remove all BG color
     coroutine.yield(require('plugins.leap'))                -- Fast jump to anywhere on the screen
     coroutine.yield(require('plugins.tmux'))                -- Jump and resize nvim panes as tmux
+    coroutine.yield(require('plugins.gitignore-gen'))       -- Generate gitignores
 
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       coroutine.yield(require('plugins.codecompanion')) -- LLM, agentic code assistant
