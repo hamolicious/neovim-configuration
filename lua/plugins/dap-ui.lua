@@ -18,6 +18,8 @@ return {
     local dap = require("dap")
     local dapui = require("dapui")
 
+    require('plugins.dapcomponents.typescript')
+
     -- Icons
     vim.fn.sign_define('DapBreakpoint', {
       text = '🔴', -- Replace with your desired symbol

@@ -14,9 +14,11 @@ return {
       keymaps = {
         -- Debugging
         { '<leader>db',        '<cmd> DapToggleBreakpoint <CR>',                                                                                         description = 'Debugger Toggle Breakpoint' },
+        { '<leader>dB',        function() require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: ')) end,                                     description = 'Debugger Toggle Conditional Breakpoint' },
         { '<leader>dr',        '<cmd> DapContinue <CR>',                                                                                                 description = 'Debugger Run' },
         { '<leader>dt',        '<cmd> DapTerminate <CR>',                                                                                                description = 'Debugger Terminate Session' },
         { '<leader>dx',        '<cmd> DapClearBreakpoints <CR>',                                                                                         description = 'Debugger Clear Breakpoints' },
+        { '<leader>du',        function() require('dapui').toggle() end,                                                                                 description = 'Debugger Toggle UI' },
 
         -- Telescope
         { '<leader>ff',        ':Telescope find_files<cr>',                                                                                              description = 'Telescope find files' },
