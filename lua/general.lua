@@ -20,3 +20,7 @@ vim.opt.shiftwidth = 2        -- how much to indent when using `<<` or `>>`
 vim.opt.expandtab = true      -- don't turn tabs into spaces
 vim.opt.tabstop = 2           -- Amount of chars <TAB> takes up
 vim.opt.autoindent = true     -- Auto indenting
+
+-- Fix debugging TS
+table.insert(vim._so_trails, "/?.dylib")
+

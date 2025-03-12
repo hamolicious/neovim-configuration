@@ -38,6 +38,7 @@ local function getPlugins()
     coroutine.yield(require('plugins.nvim-dap'))            -- Debugging
     coroutine.yield(require('plugins.mason-dap'))           -- Debugging
     coroutine.yield(require('plugins.dap-ui'))              -- Debugging UI
+    coroutine.yield(require('plugins.json5'))               -- JSON with comments
     coroutine.yield(require('plugins.dresser'))             -- Makes legendary bareable to look at
     coroutine.yield(require('plugins.theme'))               -- Theme
     coroutine.yield(require('plugins.lualine'))             -- Lualine
