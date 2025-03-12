@@ -18,35 +18,6 @@ return {
     local dap = require("dap")
     local dapui = require("dapui")
 
-    require('plugins.dapcomponents.typescript')
-
-    -- Icons
-    vim.fn.sign_define('DapBreakpoint', {
-      text = '🔴', -- Replace with your desired symbol
-      texthl = '', -- Highlight group (optional)
-      linehl = '', -- Line highlight group (optional)
-      numhl = '' -- Number highlight group (optional)
-    })
-
-    vim.fn.sign_define('DapBreakpointRejected', {
-      text = '⚫', -- Replace with your desired symbol
-      texthl = '', -- Highlight group (optional)
-      linehl = '', -- Line highlight group (optional)
-      numhl = '' -- Number highlight group (optional)
-    })
-
-    vim.fn.sign_define('DapStopped', {
-      text = '👉', -- Replace with your desired symbol
-      texthl = '', -- Highlight group (optional)
-      linehl = 'DapStoppedLine', -- Line highlight group (optional)
-      numhl = 'DapStoppedLine' -- Number highlight group (optional)
-    })
-
-    vim.cmd([[
-      highlight DapStoppedLine guibg=#808000 guifg=#000000
-    ]])
-
-
     -- Setup
     dapui.setup({
       controls = {
@@ -118,6 +89,34 @@ return {
         max_value_lines = 100
       }
     })
+
+    require('plugins.dapcomponents.typescript')
+
+    -- Icons
+    vim.fn.sign_define('DapBreakpoint', {
+      text = '🔴', -- Replace with your desired symbol
+      texthl = '', -- Highlight group (optional)
+      linehl = '', -- Line highlight group (optional)
+      numhl = '' -- Number highlight group (optional)
+    })
+
+    vim.fn.sign_define('DapBreakpointRejected', {
+      text = '⚫', -- Replace with your desired symbol
+      texthl = '', -- Highlight group (optional)
+      linehl = '', -- Line highlight group (optional)
+      numhl = '' -- Number highlight group (optional)
+    })
+
+    vim.fn.sign_define('DapStopped', {
+      text = '👉', -- Replace with your desired symbol
+      texthl = '', -- Highlight group (optional)
+      linehl = 'DapStoppedLine', -- Line highlight group (optional)
+      numhl = 'DapStoppedLine' -- Number highlight group (optional)
+    })
+
+    vim.cmd([[
+      highlight DapStoppedLine guibg=#808000 guifg=#000000
+    ]])
 
     -- Keybinds
     dap.listeners.after.event_initialized["dapui_config"] = function()
