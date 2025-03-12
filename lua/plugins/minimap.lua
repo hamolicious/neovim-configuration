@@ -82,7 +82,7 @@ return {
         margin = {
           right = 0,
           top = -1,
-          bottom = 0,
+          bottom = -1,
         },
         z_index = 1,
 
