@@ -1,12 +1,37 @@
 return {
   'nat-418/boole.nvim',
   config = function()
-    require('boole').setup({
-      mappings = {
-        increment = '<C-a>',
-        decrement = '<C-x>'
+    local cycles = {
+      {
+        'OPTIONS',
+        'GET',
+        'HEAD',
+        'POST',
+        'PUT',
+        'DELETE',
+        'TRACE',
+        'CONNECT',
       },
-      additions = {
+
+      {
+        'left',
+        'right',
+      },
+
+      {
+        'enabled',
+        'disabled',
+      },
+
+      {
+        'enable',
+        'disable',
+      },
+    }
+
+    if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
+      table.insert(
+        cycles,
         {
           'car',
           'van',
@@ -17,22 +42,16 @@ return {
           'creditcards',
           'pet',
           'life',
-        },
-        {
-          'left',
-          'right',
-        },
-        {
-          'OPTIONS',
-          'GET',
-          'HEAD',
-          'POST',
-          'PUT',
-          'DELETE',
-          'TRACE',
-          'CONNECT',
         }
+      )
+    end
+
+    require('boole').setup({
+      mappings = {
+        increment = '<C-a>',
+        decrement = '<C-x>'
       },
+      additions = cycles,
     })
   end
 }
