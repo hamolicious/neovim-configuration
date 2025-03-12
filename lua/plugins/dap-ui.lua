@@ -100,6 +100,20 @@ return {
       numhl = '' -- Number highlight group (optional)
     })
 
+    vim.fn.sign_define('DapBreakpointCondition', {
+      text = '❓', -- Conditional breakpoint symbol
+      texthl = '', -- Highlight group (optional)
+      linehl = '', -- Line highlight group (optional)
+      numhl = '' -- Number highlight group (optional)
+    })
+
+    vim.fn.sign_define('DapLogPoint', {
+      text = '📘', -- Log point symbol
+      texthl = '', -- Highlight group (optional)
+      linehl = '', -- Line highlight group (optional)
+      numhl = '' -- Number highlight group (optional)
+    })
+
     vim.fn.sign_define('DapBreakpointRejected', {
       text = '⚫', -- Replace with your desired symbol
       texthl = '', -- Highlight group (optional)
