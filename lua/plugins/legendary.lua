@@ -37,7 +37,6 @@ return {
         -- src: https://github.com/jesseduffield/lazydocker
         { '<leader><leader>d', '<cmd>FloatermNew --title=Docker --autoclose=2 lazydocker<cr>',                                                           description = 'Open lazydocker' },
 
-        { '<leader><leader>t', '<cmd>FloatermNew --title=Terminal --autoclose=2<cr>',                                                                    description = 'Create new terminal' },
         { '<leader><leader>n', '<cmd>FloatermNew --title=MiniNeovim --autoclose=2 nvim .<cr>',                                                           description = 'Create temp neovim instance' },
 
         -- AI

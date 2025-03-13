@@ -32,6 +32,7 @@ local function getPlugins()
   return coroutine.create(function()
     coroutine.yield(require('plugins.legendary'))           -- Keybinds, auto-cmds and arbitrary funcs
     coroutine.yield(require('plugins.floaterm'))            -- Floating terminals
+    coroutine.yield(require('plugins.drawer'))              -- Persistent splits
     coroutine.yield(require('plugins.lsp'))                 -- Intelisense
     coroutine.yield(require('plugins.formatting'))          -- Formatting
     coroutine.yield(require('plugins.linting'))             -- Formatting
