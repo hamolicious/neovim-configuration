@@ -30,6 +30,7 @@ return {
             'dap-console',
             'dap-repl',
             'oil',
+            'terminal',
           },
         },
         ignore_focus = {

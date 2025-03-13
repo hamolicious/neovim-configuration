@@ -35,6 +35,7 @@ drawer.create_drawer({
 
   -- When a new buffer is created, switch it to a terminal.
   on_did_create_buffer = function()
+    vim.bo.filetype = 'terminal'
     vim.fn.termopen(os.getenv('SHELL'))
   end,
 
