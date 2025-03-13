@@ -12,19 +12,6 @@ drawer.create_drawer({
   position = 'below',
 
   on_vim_enter = function(event)
-    -- Open the drawer on startup.
-    event.instance.open({
-      focus = false,
-    })
-
-    event.instance.toggle()
-
-    -- Example keymaps:
-    -- C-`: focus the drawer.
-    -- <leader>tn: open a new terminal.
-    -- <leader>tt: go to the next terminal.
-    -- <leader>tT: go to the previous terminal.
-    -- <leader>tz: zoom the terminal.
     vim.keymap.set('n', '<C-x>', function()
       event.instance.focus_or_toggle()
     end)
