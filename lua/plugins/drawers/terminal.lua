@@ -1,10 +1,10 @@
 local drawer = require('nvim-drawer')
 
 local function extendTable(target, source)
-    for key, value in pairs(source) do
-        target[key] = value
-    end
-    return target
+  for key, value in pairs(source) do
+    target[key] = value
+  end
+  return target
 end
 
 drawer.create_drawer({
@@ -12,12 +12,14 @@ drawer.create_drawer({
   position = 'below',
 
   on_vim_enter = function(event)
-    vim.keymap.set('n', '<C-x>', function()
+    local opts = { noremap = false, silent = true }
+
+    vim.keymap.set('n', '<C-a>', function()
       event.instance.focus_or_toggle()
-    end)
-    vim.keymap.set('t', '<C-x>', function()
+    end, opts)
+    vim.keymap.set('t', '<C-a>', function()
       event.instance.focus_or_toggle()
-    end)
+    end, opts)
   end,
 
   -- When a new buffer is created, switch it to a terminal.
@@ -39,15 +41,15 @@ drawer.create_drawer({
 
     vim.keymap.set('n', '<leader>tt', function()
       event.instance.go(1)
-    end, extendTable({desc = 'Next Terminal'}, opts))
+    end, extendTable({ desc = 'Next Terminal' }, opts))
     vim.keymap.set('n', '<leader>tT', function()
       event.instance.go(-1)
-    end, extendTable({desc = 'Previous Terminal'}, opts))
+    end, extendTable({ desc = 'Previous Terminal' }, opts))
     vim.keymap.set('n', '<leader>tz', function()
       event.instance.toggle_zoom()
-    end, extendTable({desc = 'Terminal Toggle Zoom'}, opts))
+    end, extendTable({ desc = 'Terminal Toggle Zoom' }, opts))
     vim.keymap.set('n', '<leader>tN', function()
       event.instance.open({ mode = 'new' })
-    end, extendTable({desc = 'New Terminal'}, opts))
+    end, extendTable({ desc = 'New Terminal' }, opts))
   end,
 })
