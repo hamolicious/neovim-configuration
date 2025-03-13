@@ -81,8 +81,8 @@ return {
 
         margin = {
           right = 0,
-          top = -1,
-          bottom = -1,
+          top = 0,
+          bottom = 0,
         },
         z_index = 1,
 
