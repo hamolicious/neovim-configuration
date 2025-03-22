@@ -24,8 +24,9 @@ return {
         { '<leader>du',        function() require('dapui').toggle() end,                                                                                 description = 'Debugger Toggle UI' },
 
         -- Telescope
+        { '<leader>fr',        ':Telescope resume<cr>',                                                                                                  description = 'Telescope resume last one innit bruv' },
         { '<leader>ff',        ':Telescope find_files<cr>',                                                                                              description = 'Telescope find files' },
-        { '<leader>fr',        ':Telescope registers<cr>',                                                                                               description = 'Telescope find registers' },
+        { '<leader>fR',        ':Telescope registers<cr>',                                                                                               description = 'Telescope find registers' },
         { '<leader>fg',        ':Telescope live_grep<cr>',                                                                                               description = 'Telescope find with live grep' },
         { '<leader>fh',        ':Telescope help_tags<cr>',                                                                                               description = 'Telescope find help tags' },
         { '<leader>fd',        ':Telescope diagnostics<cr>',                                                                                             description = 'Telescope find diagnostics' },
