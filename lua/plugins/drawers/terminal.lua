@@ -14,10 +14,10 @@ drawer.create_drawer({
   on_vim_enter = function(event)
     local opts = { noremap = false, silent = true }
 
-    vim.keymap.set('n', '<C-a>', function()
+    vim.keymap.set('n', '<C-s>', function()
       event.instance.focus_or_toggle()
     end, opts)
-    vim.keymap.set('t', '<C-a>', function()
+    vim.keymap.set('t', '<C-s>', function()
       event.instance.focus_or_toggle()
     end, opts)
   end,
@@ -35,19 +35,21 @@ drawer.create_drawer({
     vim.opt_local.statuscolumn = ''
   end,
 
-  -- Scroll to the end when changing tabs.
   on_did_open = function(event)
     local opts = { noremap = true, silent = true, buffer = true }
 
     vim.keymap.set('n', '<leader>tt', function()
       event.instance.go(1)
     end, extendTable({ desc = 'Next Terminal' }, opts))
+
     vim.keymap.set('n', '<leader>tT', function()
       event.instance.go(-1)
     end, extendTable({ desc = 'Previous Terminal' }, opts))
+
     vim.keymap.set('n', '<leader>tz', function()
       event.instance.toggle_zoom()
     end, extendTable({ desc = 'Terminal Toggle Zoom' }, opts))
+
     vim.keymap.set('n', '<leader>tN', function()
       event.instance.open({ mode = 'new' })
     end, extendTable({ desc = 'New Terminal' }, opts))
