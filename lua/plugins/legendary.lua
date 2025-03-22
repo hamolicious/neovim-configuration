@@ -35,6 +35,8 @@ return {
         { '<leader>fk',        '<cmd>Legendary<cr>',                                                                                                     description = 'Telescope find keymaps' },
         { '<leader>fn',        function() require('telescope.builtin').find_files({ cwd = '~/.notes/Notes' }) end,                                       description = 'Telescope find notes' },
 
+        { '<leader>fP',        ':Telescope planets<cr>',                                                                                                 description = 'Telescope planets' },
+
         -- Floating terminals
         -- src: https://github.com/jesseduffield/lazygit
         { '<leader><leader>l', '<cmd>FloatermNew --title=LazyGit --autoclose=2 lazygit<cr>',                                                             description = 'Open lazygit' },
