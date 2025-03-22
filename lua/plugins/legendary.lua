@@ -1,5 +1,8 @@
 return {
   'mrjones2014/legendary.nvim',
+  dependencies = {
+    "nvim-telescope/telescope.nvim",
+  },
   config = function()
     require('legendary').setup({
       extensions = {
@@ -29,6 +32,7 @@ return {
         { '<leader>fe',        ':Telescope emoji<cr>',                                                                                                   description = 'Telescope find emojies' },
         { '<leader>fc',        ':Telescope glyph<cr>',                                                                                                   description = 'Telescope find glyphs' },
         { '<leader>fk',        '<cmd>Legendary<cr>',                                                                                                     description = 'Telescope find keymaps' },
+        { '<leader>fn',        function() require('telescope.builtin').find_files({ cwd = '~/.notes/Notes' }) end,                                       description = 'Telescope find notes' },
 
         -- Floating terminals
         -- src: https://github.com/jesseduffield/lazygit
@@ -112,7 +116,12 @@ return {
       },
 
       autocmds = {
-        { 'FileType', 'nnoremap <buffer> q <cmd>quit<cr>', opts = { pattern = { 'help', 'man' } }, description = 'Use q to close the window' },
+        {
+          'FileType',
+          'nnoremap <buffer> q <cmd>quit<cr>',
+          opts = { pattern = { 'help', 'man' } },
+          description = 'Use q to close the window',
+        },
         {
           'TextYankPost',
           function(_)
