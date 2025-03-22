@@ -34,6 +34,7 @@ return {
         { '<leader>fc',        ':Telescope glyph<cr>',                                                                                                   description = 'Telescope find glyphs' },
         { '<leader>fk',        '<cmd>Legendary<cr>',                                                                                                     description = 'Telescope find keymaps' },
         { '<leader>fn',        function() require('telescope.builtin').find_files({ cwd = '~/.notes/Notes' }) end,                                       description = 'Telescope find notes' },
+        { '<leader>fG',        function() require('telescope.builtin').live_grep({ cwd = '~/.notes/Notes' }) end,                                        description = 'Telescope find notes' },
 
         { '<leader>fP',        ':Telescope planets<cr>',                                                                                                 description = 'Telescope planets' },
 
