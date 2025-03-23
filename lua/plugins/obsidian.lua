@@ -6,22 +6,22 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts         = {
-    notes_subdir       = "Inbox",
-    new_notes_location = "Inbox",
+    notes_subdir          = "Inbox",
+    new_notes_location    = "Inbox",
 
-    sort_by            = "modified",
-    sort_reversed      = true,
+    sort_by               = "modified",
+    sort_reversed         = true,
 
-    open_notes_in      = 'vsplit',
+    open_notes_in         = 'vsplit',
 
-    workspaces         = {
+    workspaces            = {
       {
         name = 'personal',
         path = '~/.notes/Notes',
       }
     },
 
-    daily_notes        = {
+    daily_notes           = {
       -- Optional, if you keep daily notes in a separate directory.
       folder = "Daily Notes",
       -- Optional, if you want to change the date format for the ID of daily notes.
@@ -34,7 +34,24 @@ return {
       template = nil
     },
 
-    mappings           = {
+    templates             = {
+      folder = "Templates",
+      date_format = "%Y-%m-%d",
+      time_format = "%H:%M",
+    },
+
+    note_id_func          = function(title)
+      return title
+    end,
+
+    note_frontmatter_func = function(note)
+      return note
+    end,
+
+    -- Don't manage frontmatter
+    disable_frontmatter   = true,
+
+    mappings              = {
       -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
       ["gf"] = {
         action = function()
