@@ -69,6 +69,7 @@ local function getPlugins()
     coroutine.yield(require('plugins.leap'))                -- Fast jump to anywhere on the screen
     coroutine.yield(require('plugins.tmux'))                -- Jump and resize nvim panes as tmux
     coroutine.yield(require('plugins.gitignore-gen'))       -- Generate gitignores
+    coroutine.yield(require('plugins.obsidian'))            -- Interact with Obsidian vaults
 
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       coroutine.yield(require('plugins.codecompanion')) -- LLM, agentic code assistant
