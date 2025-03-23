@@ -1,5 +1,8 @@
 return {
   'mrjones2014/legendary.nvim',
+  dependencies = {
+    "nvim-telescope/telescope.nvim",
+  },
   config = function()
     require('legendary').setup({
       extensions = {
@@ -21,14 +24,19 @@ return {
         { '<leader>du',        function() require('dapui').toggle() end,                                                                                 description = 'Debugger Toggle UI' },
 
         -- Telescope
+        { '<leader>fr',        ':Telescope resume<cr>',                                                                                                  description = 'Telescope resume last one innit bruv' },
         { '<leader>ff',        ':Telescope find_files<cr>',                                                                                              description = 'Telescope find files' },
-        { '<leader>fr',        ':Telescope registers<cr>',                                                                                               description = 'Telescope find registers' },
+        { '<leader>fR',        ':Telescope registers<cr>',                                                                                               description = 'Telescope find registers' },
         { '<leader>fg',        ':Telescope live_grep<cr>',                                                                                               description = 'Telescope find with live grep' },
         { '<leader>fh',        ':Telescope help_tags<cr>',                                                                                               description = 'Telescope find help tags' },
         { '<leader>fd',        ':Telescope diagnostics<cr>',                                                                                             description = 'Telescope find diagnostics' },
         { '<leader>fe',        ':Telescope emoji<cr>',                                                                                                   description = 'Telescope find emojies' },
         { '<leader>fc',        ':Telescope glyph<cr>',                                                                                                   description = 'Telescope find glyphs' },
         { '<leader>fk',        '<cmd>Legendary<cr>',                                                                                                     description = 'Telescope find keymaps' },
+        { '<leader>fn',        function() require('telescope.builtin').find_files({ cwd = '~/.notes/Notes' }) end,                                       description = 'Telescope find notes' },
+        { '<leader>fG',        function() require('telescope.builtin').live_grep({ cwd = '~/.notes/Notes' }) end,                                        description = 'Telescope find notes' },
+
+        { '<leader>fP',        ':Telescope planets<cr>',                                                                                                 description = 'Telescope planets' },
 
         -- Floating terminals
         -- src: https://github.com/jesseduffield/lazygit
@@ -112,7 +120,12 @@ return {
       },
 
       autocmds = {
-        { 'FileType', 'nnoremap <buffer> q <cmd>quit<cr>', opts = { pattern = { 'help', 'man' } }, description = 'Use q to close the window' },
+        {
+          'FileType',
+          'nnoremap <buffer> q <cmd>quit<cr>',
+          opts = { pattern = { 'help', 'man' } },
+          description = 'Use q to close the window',
+        },
         {
           'TextYankPost',
           function(_)
