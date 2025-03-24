@@ -1,7 +1,6 @@
 -- source https://github.com/epwalsh/obsidian.nvim
 return {
   'epwalsh/obsidian.nvim',
-  ft           = 'markdown',
   dependencies = {
     "nvim-lua/plenary.nvim",
   },

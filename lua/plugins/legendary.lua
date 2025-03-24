@@ -34,9 +34,22 @@ return {
         { '<leader>fc',        ':Telescope glyph<cr>',                                                                                                   description = 'Telescope find glyphs' },
         { '<leader>fk',        '<cmd>Legendary<cr>',                                                                                                     description = 'Telescope find keymaps' },
         { '<leader>fn',        function() require('telescope.builtin').find_files({ cwd = '~/.notes/Notes' }) end,                                       description = 'Telescope find notes' },
-        { '<leader>fG',        function() require('telescope.builtin').live_grep({ cwd = '~/.notes/Notes' }) end,                                        description = 'Telescope find notes' },
 
         { '<leader>fP',        ':Telescope planets<cr>',                                                                                                 description = 'Telescope planets' },
+
+        -- Notes
+        { '<leader>oo',        ':ObsidianOpen<cr>',                                                                                                      description = 'Open Obsidian' },
+        { '<leader>ot',        ':ObsidianToday<cr>',                                                                                                     description = 'Open Daily Note' },
+        { '<leader>oy',        ':ObsidianYesterday<cr>',                                                                                                 description = 'Obsidian Yesterdays Daily Note' },
+        { '<leader>on',        ':ObsidianNew<cr>',                                                                                                       description = 'Open New Note' },
+        { '<leader>oi',        ':ObsidianTemplate<cr>',                                                                                                  description = 'Obsidian Insert Template' },
+        { '<leader>oq',        ':ObsidianQuickSwitch<cr>',                                                                                               description = 'Obsidian Quick Switch' },
+        { '<leader>oT',        ':ObsidianTags<cr>',                                                                                                      description = 'Obsidian Tags' },
+        { '<leader>ol',        ':ObsidianLink<cr>',                                                                                                      description = 'Obsidian Link',                                     mode = { 'v' } },
+        { '<leader>ob',        ':ObsidianBacklinks<cr>',                                                                                                 description = 'Obsidian Backlinks' },
+        { '<leader>oa',        ':ObsidianPasteImg<cr>',                                                                                                  description = 'Obsidian Attach Image' },
+        { '<leader>od',        ':ObsidianDailies<cr>',                                                                                                   description = 'Obsidian Daily Notes' },
+        { '<leader>og',        ':ObsidianSearch<cr>',                                                                                                   description = 'Obsidian GREP Search' },
 
         -- Floating terminals
         -- src: https://github.com/jesseduffield/lazygit
