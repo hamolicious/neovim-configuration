@@ -61,7 +61,6 @@ local function getPlugins()
     coroutine.yield(require('plugins.gitlinker'))           -- Quickly copy permalinks to git
     coroutine.yield(require('plugins.coloriser'))           -- Preview hex codes
     coroutine.yield(require('plugins.autoclose'))           -- automatically close brackets
-    coroutine.yield(require('plugins.markdown-preview'))    -- Live markdown preview
     coroutine.yield(require('plugins.increment-decrement')) -- Toggle bools, weekdays, on off and yes, no
     coroutine.yield(require('plugins.minimap'))             -- VSCode style minimap
     coroutine.yield(require('plugins.macrothis'))           -- Macro management like a boss

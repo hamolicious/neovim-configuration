@@ -10,72 +10,72 @@ local dynamicn = ls.dynamic_node
 
 
 ls.add_snippets(nil, {
-	python = {
-		snip({
-				trig = "annot",
-				namr = "Annotations",
-				dscr = "Import annotations from future"
-			},
-			{
-				text('from __future__ import annotations'),
-			}
-		),
-		snip({
-				trig = "from",
-				namr = "From * import *",
-				dscr = "Import packages from modules"
-			},
-			{
-				text('from '),
-				insert(1, "module "),
-				text('import '),
-				insert(2, "package"),
-			}
-		),
-		snip({
-				trig = "def",
-				namr = "Define function",
-				dscr = "Define a basic python function"
-			},
-			{
-				text('def '),
-				insert(1, "func_name"),
-				text('('),
-				insert(2, "args"),
-				text(') -> '),
-				insert(3, "type"),
-				text(': ...'),
-			}
-		),
-		snip({
-				trig = "main",
-				namr = "main() and __main__",
-				dscr = "Adds a main func and __main__ check"
-			},
-			{
-				text({
-					'def main() -> None:',
-					'\t...',
-					'',
-					'if __name__ == \'__main__\':',
-					'\t...',
-				})
-			}
-		),
-		snip({
-				trig = "try",
-				namr = "try catch",
-				dscr = "Add a try-catch block"
-			},
-			{
-				text({
-					'try:',
-					'\t...',
-					'',
-					'except Exception as e:',
-					'\t...',
-				})
-			}
-		),
-	}
+  python = {
+    snip({
+        trig = "annot",
+        namr = "Annotations",
+        dscr = "Import annotations from future"
+      },
+      {
+        text('from __future__ import annotations'),
+      }
+    ),
+    snip({
+        trig = "from",
+        namr = "From * import *",
+        dscr = "Import packages from modules"
+      },
+      {
+        text('from '),
+        insert(1, "module "),
+        text('import '),
+        insert(2, "package"),
+      }
+    ),
+    snip({
+        trig = "def",
+        namr = "Define function",
+        dscr = "Define a basic python function"
+      },
+      {
+        text('def '),
+        insert(1, "func_name"),
+        text('('),
+        insert(2, "args"),
+        text(') -> '),
+        insert(3, "type"),
+        text(': ...'),
+      }
+    ),
+    snip({
+        trig = "main",
+        namr = "main() and __main__",
+        dscr = "Adds a main func and __main__ check"
+      },
+      {
+        text({
+          'def main() -> None:',
+          '\tpass',
+          '',
+          'if __name__ == \'__main__\':',
+          '\tmain()',
+        })
+      }
+    ),
+    snip({
+        trig = "try",
+        namr = "try catch",
+        dscr = "Add a try-catch block"
+      },
+      {
+        text({
+          'try:',
+          '\t...',
+          '',
+          'except Exception as e:',
+          '\t...',
+        })
+      }
+    ),
+  }
 })
