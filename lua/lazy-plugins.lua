@@ -72,6 +72,7 @@ local function getPlugins()
 
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       coroutine.yield(require('plugins.codecompanion')) -- LLM, agentic code assistant
+      coroutine.yield(require('plugins.jira'))          -- JIRA within nvim
     end
   end)
 end
