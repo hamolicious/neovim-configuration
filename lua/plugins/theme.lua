@@ -15,6 +15,7 @@ return {
 
     vim.api.nvim_set_hl(0, "TODO", { fg = 'Yellow' })
 
+    vim.opt.conceallevel = 2
     vim.opt.fillchars:append({
       horiz = '━',
       horizup = '┻',
