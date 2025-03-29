@@ -25,34 +25,13 @@ return {
     { "<leader>nt",  "<cmd>Neominimap toggleFocus<cr>", desc = "Switch focus on minimap" },
   },
   init = function()
-    local min_num_lines = 30
-    local max_num_lines = 4069
-    local minimap_width = 20
-    local min_minimap_width = minimap_width * 3
-
     vim.opt.wrap = false
     vim.opt.sidescrolloff = 36
 
     vim.g.neominimap = {
-      auto_enable = true,
-
-      buf_filter = function(bufnr)
-        if (vim.api.nvim_buf_line_count(bufnr) < min_num_lines) then
-          return false
-        end
-
-        return true
-      end,
+      auto_enable = false,
 
       win_filter = function(winid)
-        if (vim.api.nvim_win_get_width(winid) < min_minimap_width) then
-          return false
-        end
-
-        if (vim.api.nvim_win_get_width(winid) > max_num_lines) then
-          return false
-        end
-
         if not (winid == vim.api.nvim_get_current_win()) then
           return false
         end
@@ -76,7 +55,7 @@ return {
 
       layout = "float",
       float = {
-        minimap_width = minimap_width,
+        minimap_width = 20,
         max_minimap_height = nil,
 
         margin = {
