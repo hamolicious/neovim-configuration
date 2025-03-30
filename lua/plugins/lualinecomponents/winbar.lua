@@ -5,7 +5,12 @@ function CenteredFilenameComponent()
   local filename_w_path = vim.fn.fnamemodify(vim.fn.bufname('%'), ':~:.')
   local filename = ''
 
-  if filename_wo_path == '' then
+  -- oil:///home/hamolicious/Documents/Code/hivemind/
+
+  if filename_w_path:find("^oil:") then
+    -- TODO: maybe strip home?
+    filename = filename_w_path:gsub("^oil://", "")
+  elseif filename_wo_path == '' then
     filename = '[No Name]'
   elseif filename_w_path:len() >= width then
     filename = filename_wo_path
