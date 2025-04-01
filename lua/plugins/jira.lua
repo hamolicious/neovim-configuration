@@ -10,7 +10,13 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     require("jira").setup({
-      key = { "CQ", "RM", "MCE", "QT" },
+      key = {
+        "CQ",
+        "RM",
+        "MCE",
+        "QT",
+        "IM",
+      },
     })
   end,
   cond = function()
