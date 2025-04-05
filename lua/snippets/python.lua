@@ -12,6 +12,15 @@ local dynamicn = ls.dynamic_node
 ls.add_snippets(nil, {
   python = {
     snip({
+        trig = "idataclass",
+        namr = "import dataclasses",
+        dscr = "Import dataclasses from dataclasses"
+      },
+      {
+        text('from dataclasses import dataclass'),
+      }
+    ),
+    snip({
         trig = "annot",
         namr = "Annotations",
         dscr = "Import annotations from future"
