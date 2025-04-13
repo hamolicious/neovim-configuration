@@ -52,17 +52,14 @@ local function getPlugins()
     coroutine.yield(require('plugins.visual-whitespace'))   -- visually display whitespaces
     coroutine.yield(require('plugins.comment'))             -- comment commands
     coroutine.yield(require('plugins.oil'))                 -- File namagement as buffer
-    coroutine.yield(require('plugins.fold-line'))           -- Show folds
     coroutine.yield(require('plugins.auto-scale-windows'))  -- Scale windows automatically
     coroutine.yield(require('plugins.http-client'))         -- HTTP Client
-    coroutine.yield(require('plugins.minesweeper'))         -- minesweeper, why not
-    coroutine.yield(require('plugins.modicator'))           -- Dynamically & automatically scale windows
+    coroutine.yield(require('plugins.modicator'))           -- Change color of line number on mode
     coroutine.yield(require('plugins.snippets'))            -- Dynamic snippets
     coroutine.yield(require('plugins.gitlinker'))           -- Quickly copy permalinks to git
     coroutine.yield(require('plugins.coloriser'))           -- Preview hex codes
     coroutine.yield(require('plugins.autoclose'))           -- automatically close brackets
     coroutine.yield(require('plugins.increment-decrement')) -- Toggle bools, weekdays, on off and yes, no
-    coroutine.yield(require('plugins.minimap'))             -- VSCode style minimap
     coroutine.yield(require('plugins.macrothis'))           -- Macro management like a boss
     coroutine.yield(require('plugins.transparent'))         -- Remove all BG color
     coroutine.yield(require('plugins.leap'))                -- Fast jump to anywhere on the screen
