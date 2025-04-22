@@ -82,9 +82,6 @@ return {
         { 'tn', '<cmd>tabnew<cr>', description = 'New Tab', mode = { 'n', 'v' } },
         { 'tw', '<cmd>tabclose<cr>', description = 'Close Tab', mode = { 'n', 'v' } },
 
-        -- Games
-        { '<leader>pm', '<cmd>Nvimesweeper<cr>', description = 'Play Minesweeper', mode = { 'n', 'v' } },
-
         -- Git
         { 'gbl', '<cmd> Gitsigns blame_line <cr>', description = 'Git Blame Line', mode = { 'n' } },
         { 'gbb', '<cmd> Gitsigns blame <cr>', description = 'Git Blame', mode = { 'n' } },
