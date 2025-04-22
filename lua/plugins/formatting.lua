@@ -7,7 +7,6 @@ return {
     local setupTable = {
       formatters_by_ft = {
         python = { 'isort', 'black' },
-        c = { 'ast_grep', 'clang-format' },
         javascript = { 'prettierd' },
         typescript = { 'prettierd' },
         css = { 'prettierd' },
