@@ -23,7 +23,10 @@ center_text_block() {
 } | center_text_block
 
 
-art_file="$HOME/.config/nvim/scripts/assets/duck.txt"
+art_path="$HOME/.config/nvim/scripts/assets/back_in_5_icons"
+icons=($(ls $art_path))
+art_file="$art_path/${icons[RANDOM % ${#icons[@]}]}"
+
 lines=$(cat "$art_file")
 term_width=$(tput cols)
 term_height=$(tput lines)
