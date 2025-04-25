@@ -16,7 +16,7 @@ center_text_block() {
 
 {
   echo ""
-  echo "🕔 Back in 5"
+  echo "🕔 Coffee break"
   echo ""
   echo "Started at: $(date "+%H:%M")"
   echo ""
