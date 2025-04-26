@@ -1,11 +1,12 @@
 -- set syntax highlight for http files
 vim.filetype.add({
   extension = {
-    ['http'] = 'http',
+    ['http'] = 'http2',
+    ['tmux'] = 'tmux',
   },
 })
-vim.cmd('autocmd BufNewFile,BufRead *.http set filetype=http')
-vim.cmd('autocmd FileType http TSEnable highlight')
+vim.cmd('autocmd BufNewFile,BufRead *.http set filetype=http2')
+vim.cmd('autocmd FileType * TSEnable highlight')
 
 vim.g.mapleader = ' '         -- Set <leader> to SPACE
 
