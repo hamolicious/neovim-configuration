@@ -14,8 +14,8 @@ local tab_component = {
 
 local lualine_config = {
   lualine_a = { 'mode' },
-  lualine_b = { 'branch' },
-  lualine_c = { 'diff', 'diagnostics', tab_component },
+  lualine_b = { 'branch', 'diff', 'diagnostics' },
+  lualine_c = { tab_component },
   lualine_x = {
     require("plugins.codecompanion.lualine"),
     require("http-nvim").http_env_lualine_component,
