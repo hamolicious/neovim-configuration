@@ -5,7 +5,7 @@
 -- TODO: add to cmp config
 
 return {
-  "rodrigoscc/http.nvim",
+  "hamolicious/http.nvim",
   config = function()
     require("http-nvim").setup({
       http_dir = vim.fn.expand("~/.http"),
@@ -16,7 +16,7 @@ return {
     })
 
     vim.api.nvim_create_autocmd("FileType", {
-      pattern = "http",
+      pattern = "http*",
       callback = function()
         local opts = { noremap = true, silent = true, buffer = true }
 
