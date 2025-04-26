@@ -6,6 +6,5 @@ return {
     drawer.setup(opts)
 
     require('plugins.drawers.terminal')
-
   end
 }

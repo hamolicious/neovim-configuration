@@ -34,8 +34,11 @@ return {
         { '<leader>fc', ':Telescope glyph<cr>', description = 'Telescope find glyphs' },
         { '<leader>fk', '<cmd>Legendary<cr>', description = 'Telescope find keymaps' },
         { '<leader>fn', function() require('telescope.builtin').find_files({ cwd = '~/.notes/Notes' }) end, description = 'Telescope find notes' },
+        { '<leader>fm', ':NoiceFzf<cr>', description = 'Telescope find messages' },
 
         { '<leader>fP', ':Telescope planets<cr>', description = 'Telescope planets 🤷' },
+
+        { '<leader>nd', ':NoiceDismiss<cr>', description = 'Dismiss All Notifications' },
 
         -- Notes
         { '<leader>oo', ':ObsidianOpen<cr>', description = 'Open Obsidian' },
