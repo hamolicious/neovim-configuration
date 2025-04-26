@@ -21,6 +21,7 @@ vim.opt.expandtab = true      -- don't turn tabs into spaces
 vim.opt.tabstop = 2           -- Amount of chars <TAB> takes up
 vim.opt.autoindent = true     -- Auto indenting
 
+vim.o.showmode = false        -- Turn off nvim status line
+
 -- Fix debugging TS
 table.insert(vim._so_trails, "/?.dylib")
-
