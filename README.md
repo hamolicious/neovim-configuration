@@ -19,8 +19,5 @@ export NVIM_PLATFORM='UBUNTU_PC'
 This configuration requires a few 3rd party dependencies. You can install them all using:
 
 ```bash
-sudo apt install jq
-brew install ripgrep
-brew install lazygit
-brew install lazydocker
+make install-tools
 ```
