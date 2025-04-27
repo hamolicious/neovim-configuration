@@ -30,7 +30,7 @@ return {
             'dap-console',
             'dap-repl',
             'terminal',
-            'http-nvim',
+            'httpnvim',
           },
         },
         ignore_focus = {

@@ -17,7 +17,7 @@
   "gitignore-gen.nvim": { "branch": "main", "commit": "79e29c2171cba61cb0c7cec90df572071e583ca4" },
   "gitlinker.nvim": { "branch": "master", "commit": "cc59f732f3d043b626c8702cb725c82e54d35c25" },
   "gitsigns.nvim": { "branch": "main", "commit": "4c40357994f386e72be92a46f41fc1664c84c87d" },
-  "http.nvim": { "branch": "main", "commit": "5b4aa153d391b6e3a163e3ec740479f0da127a8c" },
+  "http.nvim": { "branch": "main", "commit": "9763754195d500ea7ae30387072cc1f13f9ed4a8" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "leap.nvim": { "branch": "main", "commit": "346a16ef942635a8ca5ff92e603d07e7e8be6cbe" },
   "legendary.nvim": { "branch": "master", "commit": "2e0c367392cb060f75f85590c2d6008aa9e31fbf" },
