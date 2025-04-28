@@ -30,6 +30,7 @@ return {
             'dap-console',
             'dap-repl',
             'terminal',
+            'httpnvim',
           },
         },
         ignore_focus = {
@@ -62,7 +63,7 @@ return {
     })
 
     vim.api.nvim_create_autocmd('FileType', {
-      pattern = 'dap-*',
+      pattern = { 'dap-*' },
       callback = function()
         vim.wo.winbar = nil
       end

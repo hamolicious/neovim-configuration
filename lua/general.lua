@@ -1,11 +1,12 @@
 -- set syntax highlight for http files
 vim.filetype.add({
   extension = {
-    ['http'] = 'http',
+    ['http'] = 'http2',
+    ['tmux'] = 'tmux',
   },
 })
-vim.cmd('autocmd BufNewFile,BufRead *.http set filetype=http')
-vim.cmd('autocmd FileType http TSEnable highlight')
+vim.cmd('autocmd BufNewFile,BufRead *.http set filetype=http2')
+vim.cmd('autocmd FileType * TSEnable highlight')
 
 vim.g.mapleader = ' '         -- Set <leader> to SPACE
 
@@ -21,6 +22,7 @@ vim.opt.expandtab = true      -- don't turn tabs into spaces
 vim.opt.tabstop = 2           -- Amount of chars <TAB> takes up
 vim.opt.autoindent = true     -- Auto indenting
 
+vim.o.showmode = false        -- Turn off nvim status line
+
 -- Fix debugging TS
 table.insert(vim._so_trails, "/?.dylib")
-

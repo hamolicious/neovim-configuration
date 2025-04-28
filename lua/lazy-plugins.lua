@@ -67,6 +67,7 @@ local function getPlugins()
     coroutine.yield(require('plugins.gitignore-gen'))       -- Generate gitignores
     coroutine.yield(require('plugins.obsidian'))            -- Interact with Obsidian vaults
     coroutine.yield(require('plugins.smear-cursor'))        -- Smooth Cursor ❤️
+    coroutine.yield(require('plugins.noice'))               -- messages, cmdline popupmenu overhaul
 
     if (IsCurrentPlatformOneOf(Platform.WORK_MAC)) then
       coroutine.yield(require('plugins.codecompanion')) -- LLM, agentic code assistant

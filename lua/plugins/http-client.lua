@@ -13,10 +13,11 @@ return {
       environments_file = "environments.json",
       active_envs_file = vim.fn.stdpath("data") .. "/http/envs.json",
       win_config = { split = "below" },
+      use_compound_filetypes = true,
     })
 
     vim.api.nvim_create_autocmd("FileType", {
-      pattern = "http",
+      pattern = "http*",
       callback = function()
         local opts = { noremap = true, silent = true, buffer = true }
 
