@@ -1,3 +1,5 @@
+**/*.work*
+
 # Compiled Lua sources
 luac.out
 
