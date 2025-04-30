@@ -32,6 +32,7 @@ return {
         { name = 'nvim_lsp_signature_help' },
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
+        { name = 'http' },
         { name = 'luasnip' },
         { name = 'buffer',                 keyword_length = 3 },
         { name = 'codecompanion' }
